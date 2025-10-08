@@ -1,0 +1,102 @@
+<div class="max-w-6xl mx-auto">
+  <div class="mb-6">
+    <%= link_to investment_categories_path, class: "inline-flex items-center text-indigo-600 hover:text-indigo-700 font-medium" do %>
+      <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+      </svg>
+      <%= t('actions.back_to_categories') %>
+    <% end %>
+  </div>
+
+  <div class="bg-white rounded-lg shadow-lg overflow-hidden mb-8">
+    <div class="bg-gradient-to-r from-indigo-600 to-purple-600 px-8 py-12 text-white">
+      <h1 class="text-4xl font-bold mb-2"><%= @investment_category.name %></h1>
+      <% if @investment_category.description.present? %>
+        <p class="text-lg text-indigo-100"><%= @investment_category.description %></p>
+      <% end %>
+    </div>
+
+    <div class="p-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        <% if @investment_category.how_it_works.present? %>
+          <div class="bg-gray-50 rounded-lg p-6">
+            <div class="flex items-center mb-4">
+              <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
+                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <h2 class="text-xl font-bold text-gray-900"><%= t('labels.how_it_works') %></h2>
+            </div>
+            <p class="text-gray-700 leading-relaxed"><%= @investment_category.how_it_works %></p>
+          </div>
+        <% end %>
+
+        <% if @investment_category.affecting_factors.present? %>
+          <div class="bg-gray-50 rounded-lg p-6">
+            <div class="flex items-center mb-4">
+              <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mr-3">
+                <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                </svg>
+              </div>
+              <h2 class="text-xl font-bold text-gray-900"><%= t('labels.affecting_factors') %></h2>
+            </div>
+            <p class="text-gray-700 leading-relaxed"><%= @investment_category.affecting_factors %></p>
+          </div>
+        <% end %>
+      </div>
+
+      <div class="border-t border-gray-200 pt-8">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6"><%= t('labels.investment_types_in_category') %></h2>
+
+        <% if @investment_category.investment_types.any? %>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+            <% @investment_category.investment_types.each do |investment_type| %>
+              <%= link_to new_simulation_path(investment_type_id: investment_type.id), class: "block" do %>
+                <div class="bg-white border border-gray-200 rounded-lg p-4 hover:border-indigo-500 hover:shadow-md transition duration-200 cursor-pointer">
+                  <div class="flex items-start justify-between">
+                    <div class="flex-1">
+                      <h3 class="font-semibold text-gray-900 mb-1"><%= investment_type.name %></h3>
+                      <% if investment_type.ticker_symbol.present? %>
+                        <p class="text-sm text-gray-500 mb-2"><%= t('labels.ticker') %>: <%= investment_type.ticker_symbol %></p>
+                      <% end %>
+                      <% if investment_type.base_price.present? %>
+                        <p class="text-lg font-bold text-indigo-600">$<%= number_with_delimiter(investment_type.base_price, delimiter: ',') %></p>
+                      <% end %>
+                    </div>
+                    <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                  </div>
+                </div>
+              <% end %>
+            <% end %>
+          </div>
+
+          <div class="bg-indigo-50 border border-indigo-200 rounded-lg p-6">
+            <div class="flex items-center justify-between">
+              <div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2"><%= t('pages.category_show.ready_to_start') %></h3>
+                <p class="text-gray-600"><%= t('pages.category_show.create_simulation_prompt') %></p>
+              </div>
+              <%= link_to new_simulation_path, class: "bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-semibold transition duration-200 inline-flex items-center" do %>
+                <%= t('actions.start_exercise') %>
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                </svg>
+              <% end %>
+            </div>
+          </div>
+        <% else %>
+          <div class="bg-gray-50 rounded-lg p-8 text-center">
+            <svg class="w-12 h-12 text-gray-400 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"/>
+            </svg>
+            <p class="text-gray-600"><%= t('messages.no_investment_types') %></p>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

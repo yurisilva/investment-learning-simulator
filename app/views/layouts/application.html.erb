@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= content_for(:title) || t('nav.app_name') %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= yield :head %>
+
+    <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
+    <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
+
+    <link rel="icon" href="/icon.png" type="image/png">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+
+    <%# Includes all stylesheet files in app/assets/stylesheets %>
+    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body class="bg-gray-50 min-h-screen">
+    <nav class="bg-white shadow-lg">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+          <div class="flex items-center space-x-8">
+            <%= link_to root_path, class: "flex items-center space-x-2" do %>
+              <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+              </svg>
+              <span class="text-2xl font-bold text-gray-800"><%= t('nav.app_name') %></span>
+            <% end %>
+          </div>
+
+          <div class="flex items-center space-x-6">
+            <%= link_to t('nav.categories'), investment_categories_path, class: "text-gray-700 hover:text-indigo-600 font-medium transition duration-200" %>
+            <%= link_to t('nav.glossary'), glossary_terms_path, class: "text-gray-700 hover:text-indigo-600 font-medium transition duration-200" %>
+            <%= link_to t('nav.new_simulation'), new_simulation_path, class: "bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-lg font-medium transition duration-200" %>
+            <%= locale_switcher %>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <% if flash[:notice] %>
+      <div class="container mx-auto px-4 mt-4">
+        <div class="bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-lg" role="alert">
+          <%= flash[:notice] %>
+        </div>
+      </div>
+    <% end %>
+
+    <% if flash[:alert] %>
+      <div class="container mx-auto px-4 mt-4">
+        <div class="bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded-lg" role="alert">
+          <%= flash[:alert] %>
+        </div>
+      </div>
+    <% end %>
+
+    <main class="container mx-auto px-4 py-8">
+      <%= yield %>
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 mt-auto">
+      <div class="container mx-auto px-4 py-6">
+        <div class="flex justify-between items-center">
+          <p class="text-gray-600"><%= t('footer.tagline') %></p>
+          <p class="text-gray-500 text-sm"><%= t('footer.built_with') %></p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

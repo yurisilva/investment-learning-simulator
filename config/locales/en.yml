@@ -1,0 +1,291 @@
+en:
+  # Locale names
+  locales:
+    en: "English"
+    pt: "Portuguese"
+
+  # Navigation
+  nav:
+    app_name: "Investment Learner"
+    categories: "Categories"
+    glossary: "Glossary"
+    new_simulation: "New Simulation"
+
+  # Common actions
+  actions:
+    back: "Back"
+    back_to_categories: "Back to Categories"
+    start_exercise: "Start Exercise"
+    execute_trade: "Execute Trade"
+    advance_time: "Advance Time (+1 Month)"
+    create_simulation: "Create Simulation"
+    cancel: "Cancel"
+    learn_more: "Learn More"
+    view_all_terms: "View all terms"
+    clear_filter: "Clear filter"
+    explore_categories: "Explore Investment Categories"
+    view_categories: "View Investment Categories"
+    buy: "Buy"
+    sell: "Sell"
+
+  # Labels
+  labels:
+    current_capital: "Current Capital"
+    profit_loss: "Profit/Loss"
+    time_elapsed: "Time Elapsed"
+    portfolio_holdings: "Portfolio Holdings"
+    transaction_history: "Transaction History"
+    current_price: "Current Price"
+    action: "Action"
+    quantity: "Quantity"
+    price_per_unit: "Price per Unit"
+    trading_panel: "Trading Panel"
+    time_control: "Time Control"
+    available_to_invest: "Available to invest"
+    current_value: "Current Value"
+    avg_price: "Avg Price"
+    investment_type: "Investment Type"
+    initial_capital: "Initial Capital"
+    select_investment_type: "Select Investment Type"
+    ticker: "Ticker"
+    how_it_works: "How It Works"
+    affecting_factors: "Affecting Factors"
+    investment_types_in_category: "Investment Types in this Category"
+    filter_by_category: "Filter by Category"
+    all_terms: "All Terms"
+    filtering_by: "Filtering by"
+    example: "Example"
+    related_to: "Related to"
+    definition: "Definition"
+    related_categories: "Related Categories"
+    visual_example: "Visual Example"
+    explore_more_terms: "Explore More Terms"
+    continue_building_knowledge: "Continue building your investment knowledge"
+    browse_categories: "Browse Categories"
+    per_unit: "per unit"
+
+  # Pluralization
+  plurals:
+    type:
+      one: "type"
+      other: "types"
+    term:
+      one: "term"
+      other: "terms"
+    month:
+      one: "month"
+      other: "months"
+    unit:
+      one: "unit"
+      other: "units"
+    transaction:
+      one: "transaction"
+      other: "transactions"
+    error:
+      one: "error"
+      other: "errors"
+
+  # Page titles and headings
+  pages:
+    categories:
+      title: "Investment Categories"
+      subtitle: "Explore different types of investments and start your learning journey"
+    glossary:
+      title: "Investment Glossary"
+      subtitle: "Learn key investment terms and concepts"
+    simulation:
+      new_title: "Create New Simulation"
+      new_subtitle: "Set up your investment practice environment"
+      show_title: "Investment Simulation"
+    category_show:
+      ready_to_start: "Ready to start learning?"
+      create_simulation_prompt: "Create a simulation to practice investing in these types"
+
+  # Messages
+  messages:
+    no_categories: "No Categories Available"
+    no_categories_detail: "Check back later for investment categories to explore."
+    no_holdings: "No holdings yet"
+    no_holdings_detail: "Start by buying some investments"
+    no_transactions: "No transactions yet"
+    no_terms_found: "No Terms Found"
+    no_terms_in_category: "No glossary terms found for the category"
+    no_terms_available: "No glossary terms available yet. Check back later."
+    no_investment_types: "No investment types available in this category yet."
+    showing_transactions: "Showing 10 of %{count} transactions"
+    showing_terms: "Showing %{count} %{term}"
+    need_help_choosing: "Need help choosing?"
+    explore_before_starting: "Explore our investment categories to learn about different investment types before starting your simulation."
+    advance_time_description: "Advance time to see how your investments perform over time."
+
+  # Simulation info
+  simulation:
+    status:
+      active: "Active"
+      completed: "Completed"
+    how_it_works:
+      title: "How simulations work:"
+      start_with_capital: "You'll start with your initial capital amount"
+      buy_and_sell: "Buy and sell investments to build your portfolio"
+      advance_time: "Advance time to see how your investments perform"
+      track_performance: "Track your profit/loss and learn investment strategies"
+    form:
+      investment_type_help: "Choose the type of investment you want to practice with"
+      initial_capital_help: "Enter the amount of money you want to start with"
+      required: "required"
+      errors_prevented_save: "prohibited this simulation from being saved:"
+
+  # Trading tips
+  trading:
+    tips:
+      title: "Trading Tips"
+      monitor_prices: "Monitor price changes over time"
+      diversify: "Diversify your holdings"
+      consider_risk: "Consider your risk tolerance"
+      learn_from_decisions: "Learn from your decisions"
+
+  # Footer
+  footer:
+    tagline: "Investment Learner - Learn investing through simulation"
+    built_with: "Built with Rails and Tailwind CSS"
+
+  # Time helpers
+  time:
+    ago: "ago"
+
+  # Investment categories
+  categories:
+    renda-fixa:
+      name: "Fixed Income"
+      description: "Investments with predictable returns, generally tied to indices like CDI or IPCA. Ideal for those seeking security and consistent income."
+    renda-variavel:
+      name: "Variable Income"
+      description: "Investments whose returns cannot be determined in advance, varying according to the market. Offers potential for higher gains but with more risk."
+    cdb:
+      name: "CDB"
+      description: "Bank Deposit Certificate - private security issued by banks to raise funds. Protected by FGC up to R$ 250k."
+    tesouro-direto:
+      name: "Treasury Direct"
+      description: "Government bonds issued by the Federal Government. Considered the safest investment in Brazil."
+    acoes:
+      name: "Stocks"
+      description: "Shares of company capital traded on B3. By buying a stock, you become a partner in the company."
+    etf:
+      name: "ETF"
+      description: "Exchange Traded Funds - funds that replicate indices and are traded like stocks on the exchange."
+    fundos-imobiliarios:
+      name: "Real Estate Funds"
+      description: "Funds that invest in real estate or related securities. Distribute monthly income exempt from IR."
+    criptomoedas:
+      name: "Cryptocurrencies"
+      description: "Decentralized digital currencies based on blockchain. High volatility and risk."
+
+  # Glossary terms
+  glossary_terms:
+    ipca:
+      term: "IPCA"
+      definition: "Broad Consumer Price Index - Brazil's main inflation indicator, measured by IBGE."
+    selic:
+      term: "SELIC"
+      definition: "Special Settlement and Custody System - Brazil's basic interest rate, set by COPOM."
+    cdi:
+      term: "CDI"
+      definition: "Interbank Deposit Certificate - loan rate between banks, very close to SELIC."
+    put:
+      term: "PUT"
+      definition: "Sell option that gives the right to sell an asset at a predetermined price."
+    call:
+      term: "CALL"
+      definition: "Buy option that gives the right to buy an asset at a predetermined price."
+    short:
+      term: "Short"
+      definition: "Short selling - speculative operation that profits from the decline in asset price."
+    long:
+      term: "Long"
+      definition: "Long position - strategy of buying and holding assets expecting appreciation."
+    b3:
+      term: "B3"
+      definition: "Brazil, Stock Exchange, Over-the-Counter - Brazil's official stock exchange, where stocks, ETFs and other assets are traded."
+    dividendos:
+      term: "Dividends"
+      definition: "Portion of a company's profit distributed to shareholders. Exempt from Income Tax for individuals."
+    yield:
+      term: "Yield"
+      definition: "Percentage return on an investment relative to its price. In REITs, represents monthly return."
+    liquidez:
+      term: "Liquidity"
+      definition: "Ease of converting an asset into cash without significant loss of value."
+    fgc:
+      term: "FGC"
+      definition: "Credit Guarantee Fund - protects Fixed Income investments up to R$ 250k per CPF and institution."
+    bovespa:
+      term: "Bovespa"
+      definition: "Former São Paulo stock exchange, now part of B3. Ibovespa index represents main stocks."
+    home_broker:
+      term: "Home Broker"
+      definition: "Online platform for trading assets on the stock exchange through brokers."
+    diversificacao:
+      term: "Diversification"
+      definition: "Investment strategy that distributes resources across different assets to reduce risk."
+    volatilidade:
+      term: "Volatility"
+      definition: "Measure of price variation of an asset. High volatility means greater risk and opportunity."
+    inflacao:
+      term: "Inflation"
+      definition: "General increase in prices in the economy. Erodes the purchasing power of money over time."
+    juros_compostos:
+      term: "Compound Interest"
+      definition: "Interest calculated on initial capital plus accumulated interest. Einstein's eighth wonder of the world."
+    aporte:
+      term: "Contribution"
+      definition: "Regular cash applications in investments to increase equity over time."
+    benchmark:
+      term: "Benchmark"
+      definition: "Reference index used to compare investment performance. Ex: CDI for Fixed Income."
+    taxa_administracao:
+      term: "Management Fee"
+      definition: "Annual percentage charged by funds to cover management costs. Directly impacts investor return."
+    risco:
+      term: "Risk"
+      definition: "Possibility of losses in an investment. Generally, higher risk offers potential for higher return."
+    rentabilidade:
+      term: "Profitability"
+      definition: "Financial gain obtained from an investment over a period, expressed as a percentage."
+    custodia:
+      term: "Custody"
+      definition: "Service of safekeeping and administering securities. In Brazil, done by B3 or asset managers."
+    dy_dividend_yield:
+      term: "DY (Dividend Yield)"
+      definition: "Annual percentage that an asset pays in dividends relative to its price. Used to compare income from stocks and REITs."
+    indice_sharpe:
+      term: "Sharpe Ratio"
+      definition: "Measure that evaluates investment return adjusted for risk taken. Higher Sharpe = better risk-return relationship."
+    p_l_preco_lucro:
+      term: "P/E (Price/Earnings)"
+      definition: "Ratio between stock price and company's profit per share. Indicates how many years of profit are needed to recover investment."
+    p_vp_preco_valor_patrimonial:
+      term: "P/BV (Price/Book Value)"
+      definition: "Ratio between stock price and book value per share. Below 1.0 may indicate the stock is undervalued."
+    roe:
+      term: "ROE (Return on Equity)"
+      definition: "Measures company profitability in relation to shareholders' equity. Expressed as percentage, indicates efficiency in generating profit."
+    spread:
+      term: "Spread"
+      definition: "Difference between buy and sell prices of an asset. Also refers to additional rate over a benchmark in investments."
+    aportes:
+      term: "Contributions"
+      definition: "Regular additions of money to investments over time. Fundamental strategy for building wealth through compound interest."
+
+  # Glossary term visual examples (HTML content)
+  glossary_examples:
+    dividendos: '<div class="bg-white rounded-lg p-4 space-y-4"><h4 class="text-lg font-bold mb-3 text-gray-800">DIVIDENDS: Earn Money Without Selling Your Shares!</h4><div class="bg-blue-50 border-l-4 border-blue-500 p-3 mb-4"><p class="font-bold text-blue-900 mb-2">💡 Key Point: What are dividends?</p><p class="text-sm text-gray-700">Dividends are <strong>CASH PAYMENTS</strong> that companies make to shareholders. It''s a portion of profits that the company distributes. You RECEIVE the money and REMAIN the owner of the shares!</p></div><div class="bg-yellow-50 border-l-4 border-yellow-500 p-3 mb-4"><p class="font-bold text-yellow-900 mb-2">⚠️ Important: How does it work?</p><ul class="text-sm text-gray-700 space-y-1 ml-4 list-disc"><li><strong>You DON''T sell your shares</strong> - you remain the owner!</li><li><strong>Money DEPOSITED to your account</strong> - automatically, without doing anything</li><li><strong>Tax-free in Brazil</strong> - you don''t pay income tax on dividends!</li><li><strong>Frequency:</strong> Quarterly, semi-annually, or annually (depends on company)</li><li><strong>Not guaranteed:</strong> Company may not pay if it has losses</li></ul></div><div class="bg-blue-50 border border-blue-200 rounded p-3 mb-4"><p class="text-sm"><strong>Initial investment:</strong> 1,000 shares at R$ 30 each = <strong class="text-blue-700">R$ 30,000</strong></p><p class="text-xs text-gray-600 mt-2">You OWN 1,000 shares (you don''t sell them)</p></div><table class="w-full border-collapse mb-4"><thead><tr class="bg-gray-800 text-white"><th class="border border-gray-600 px-3 py-2">Period</th><th class="border border-gray-600 px-3 py-2 text-right">R$ per Share</th><th class="border border-gray-600 px-3 py-2 text-right">You Receive</th><th class="border border-gray-600 px-3 py-2 text-right">Cumulative Total</th></tr></thead><tbody><tr class="bg-green-50"><td class="border border-gray-300 px-3 py-2">1st Quarter</td><td class="border border-gray-300 px-3 py-2 text-right">R$ 0.50</td><td class="border border-gray-300 px-3 py-2 text-right text-green-700 font-bold">R$ 500</td><td class="border border-gray-300 px-3 py-2 text-right">R$ 500</td></tr><tr class="bg-gray-50"><td class="border border-gray-300 px-3 py-2 text-sm italic" colspan="4">Money deposited! Shares are still yours (1,000 shares)</td></tr><tr class="bg-green-50"><td class="border border-gray-300 px-3 py-2">2nd Quarter</td><td class="border border-gray-300 px-3 py-2 text-right">R$ 0.50</td><td class="border border-gray-300 px-3 py-2 text-right text-green-700 font-bold">R$ 500</td><td class="border border-gray-300 px-3 py-2 text-right">R$ 1,000</td></tr><tr class="bg-green-50"><td class="border border-gray-300 px-3 py-2">3rd Quarter</td><td class="border border-gray-300 px-3 py-2 text-right">R$ 0.50</td><td class="border border-gray-300 px-3 py-2 text-right text-green-700 font-bold">R$ 500</td><td class="border border-gray-300 px-3 py-2 text-right">R$ 1,500</td></tr><tr class="bg-green-50"><td class="border border-gray-300 px-3 py-2">4th Quarter</td><td class="border border-gray-300 px-3 py-2 text-right">R$ 0.50</td><td class="border border-gray-300 px-3 py-2 text-right text-green-700 font-bold">R$ 500</td><td class="border border-gray-300 px-3 py-2 text-right font-bold">R$ 2,000</td></tr><tr class="bg-green-100 font-bold"><td colspan="2" class="border border-gray-300 px-3 py-2">Total Received in Year</td><td class="border border-gray-300 px-3 py-2 text-right text-green-800 text-lg">R$ 2,000</td><td class="border border-gray-300 px-3 py-2 text-right"></td></tr></tbody></table><div class="bg-green-50 border border-green-200 rounded p-3 mb-4"><p class="text-sm font-bold mb-2 text-green-900">Annual Dividend Yield (DY):</p><p class="text-3xl font-bold text-green-700">6.67%</p><p class="text-xs text-gray-600 mt-2">Calculation: (R$ 2,000 received ÷ R$ 30,000 invested) × 100</p></div><div class="bg-purple-50 border-l-4 border-purple-500 p-3"><p class="font-bold text-purple-900 mb-2">💡 The best part:</p><ul class="text-sm text-gray-700 space-y-1 ml-4 list-disc"><li><strong>Your 1,000 shares remain yours!</strong></li><li><strong>They can appreciate</strong> (e.g., rise to R$ 35, R$ 40...)</li><li><strong>Dividend is a BONUS</strong> - passive income while holding shares</li><li><strong>R$ 2,000 tax-free</strong> - you keep it all!</li></ul></div><div class="bg-blue-50 border-l-4 border-blue-500 p-3 mt-4"><p class="font-bold text-blue-900 mb-2">⚠️ Compare with selling shares:</p><p class="text-sm text-gray-700">If you SOLD the shares for R$ 32,000 (profit R$ 2,000), you''d pay <strong>15% tax = R$ 300</strong>. With dividends, you receive R$ 2,000 TAX-FREE and STILL own the shares!</p></div></div>'
+
+    call: '<div class="bg-white rounded-lg p-4 space-y-4"><h4 class="text-lg font-bold mb-3 text-gray-800">CALL: Bet on Price Increase</h4><div class="bg-blue-50 border-l-4 border-blue-500 p-3 mb-4"><p class="font-bold text-blue-900 mb-2">💡 Key Point: What is a CALL option?</p><p class="text-sm text-gray-700">CALL gives you the <strong>RIGHT to BUY</strong> shares at a fixed price (strike). You bet the price will RISE without needing to buy shares now.</p></div><div class="bg-yellow-50 border-l-4 border-yellow-500 p-3 mb-4"><p class="font-bold text-yellow-900 mb-2">⚠️ Important: What you OWN and what you PAY</p><ul class="text-sm text-gray-700 space-y-1 ml-4 list-disc"><li><strong>You DON''T own shares initially</strong> - you''re just buying a RIGHT</li><li><strong>Strike Price R$ 100:</strong> Price you have the RIGHT to buy (not an obligation!)</li><li><strong>Premium R$ 300:</strong> TOTAL cost you pay NOW for this right</li><li><strong>You only exercise if worthwhile:</strong> If price < strike, let it expire</li></ul></div><table class="w-full border-collapse mb-4"><thead><tr class="bg-gray-100"><th class="border border-gray-300 px-3 py-2 text-left">Initial Situation</th><th class="border border-gray-300 px-3 py-2 text-right">Value</th></tr></thead><tbody><tr><td class="border border-gray-300 px-3 py-2">Current market price</td><td class="border border-gray-300 px-3 py-2 text-right">R$ 100</td></tr><tr><td class="border border-gray-300 px-3 py-2">You buy CALL (strike R$ 100) - premium paid</td><td class="border border-gray-300 px-3 py-2 text-right text-red-600">-R$ 300</td></tr><tr class="bg-gray-50"><td class="border border-gray-300 px-3 py-2 text-sm italic">You still DON''T own any shares</td><td class="border border-gray-300 px-3 py-2 text-right text-gray-600">R$ 0</td></tr></tbody></table><div class="grid grid-cols-1 md:grid-cols-2 gap-4"><div class="border border-green-200 rounded p-3 bg-green-50"><h5 class="font-bold text-sm mb-2 text-green-800">Scenario A: Price RISES to R$ 115 (success!)</h5><table class="w-full text-sm mb-2"><tr class="bg-blue-50"><td class="py-1 font-bold" colspan="2">You EXERCISE the CALL:</td></tr><tr><td class="py-1">1. Buy 100 shares at R$ 100</td><td class="text-right text-red-600">-R$ 10,000</td></tr><tr><td class="py-1">2. Sell immediately at R$ 115</td><td class="text-right text-green-600">+R$ 11,500</td></tr><tr><td class="py-1">3. Gain on transaction</td><td class="text-right">R$ 1,500</td></tr><tr><td class="py-1">4. Premium paid initially</td><td class="text-right text-red-600">-R$ 300</td></tr><tr class="border-t-2 font-bold"><td class="py-1">Net profit</td><td class="text-right text-green-700">R$ 1,200</td></tr></table><p class="text-xs text-green-700 font-bold bg-green-100 p-2 rounded">ROI: 400%! (invested R$ 300, earned R$ 1,200)</p></div><div class="border border-red-200 rounded p-3 bg-red-50"><h5 class="font-bold text-sm mb-2 text-red-800">Scenario B: Price FLAT at R$ 98 (didn''t rise)</h5><table class="w-full text-sm mb-2"><tr><td class="py-1">Market price</td><td class="text-right">R$ 98</td></tr><tr><td class="py-1">Your CALL strike</td><td class="text-right">R$ 100</td></tr><tr class="bg-yellow-50"><td class="py-1 font-bold" colspan="2">You DON''T EXERCISE (not worth it):</td></tr><tr><td class="py-1 text-xs" colspan="2">Why? Buying at R$ 100 and selling at R$ 98 = loss!</td></tr><tr><td class="py-1">CALL expires worthless</td><td class="text-right text-gray-600">R$ 0</td></tr><tr class="border-t-2 font-bold"><td class="py-1">Total loss</td><td class="text-right text-red-600">-R$ 300</td></tr></table><p class="text-xs text-gray-700 bg-gray-100 p-2 rounded">You only lost the premium. You didn''t buy any shares.</p></div></div><div class="bg-purple-50 border-l-4 border-purple-500 p-3 mt-4"><p class="font-bold text-purple-900 mb-2">💡 Summary:</p><p class="text-sm text-gray-700">CALL = Bet on rise. You pay R$ 300 for a RIGHT. If price rises a lot, huge profit! If it doesn''t rise, you only lose the R$ 300. You''re NEVER obligated to buy shares.</p></div></div>'
+
+    put: '<div class="bg-white rounded-lg p-4 space-y-4"><h4 class="text-lg font-bold mb-3 text-gray-800">PUT: Insurance Against Price Drop</h4><div class="bg-blue-50 border-l-4 border-blue-500 p-3 mb-4"><p class="font-bold text-blue-900 mb-2">💡 Key Point: What is a PUT option?</p><p class="text-sm text-gray-700">PUT is like <strong>insurance for your shares</strong>. You PAY a premium to have the RIGHT (not obligation) to SELL your shares at a fixed price, even if the market crashes.</p></div><div class="bg-yellow-50 border-l-4 border-yellow-500 p-3 mb-4"><p class="font-bold text-yellow-900 mb-2">⚠️ Important: What you OWN and what you PAY</p><ul class="text-sm text-gray-700 space-y-1 ml-4 list-disc"><li><strong>You ALREADY OWN:</strong> 100 shares (bought before)</li><li><strong>Strike Price R$ 95:</strong> Fixed price you have the RIGHT to sell at</li><li><strong>Premium R$ 200:</strong> Insurance cost (you PAY this now, non-refundable)</li><li><strong>You''re NOT obligated:</strong> Only sell if you want (if it''s advantageous)</li></ul></div><table class="w-full border-collapse mb-4"><thead><tr class="bg-gray-100"><th class="border border-gray-300 px-3 py-2 text-left">Initial Situation</th><th class="border border-gray-300 px-3 py-2 text-right">Value</th></tr></thead><tbody><tr><td class="border border-gray-300 px-3 py-2">You own 100 shares at R$ 100 each</td><td class="border border-gray-300 px-3 py-2 text-right">R$ 10,000</td></tr><tr><td class="border border-gray-300 px-3 py-2">Buy PUT (strike R$ 95) - premium paid</td><td class="border border-gray-300 px-3 py-2 text-right text-red-600">-R$ 200</td></tr></tbody></table><div class="grid grid-cols-1 md:grid-cols-2 gap-4"><div class="border border-red-200 rounded p-3 bg-red-50"><h5 class="font-bold text-sm mb-2 text-red-800">Scenario A: Price DROPS to R$ 80 (disaster!)</h5><table class="w-full text-sm mb-2"><tr><td class="py-1">Market price drops to</td><td class="text-right">R$ 80</td></tr><tr><td class="py-1">Without PUT you''d sell for:</td><td class="text-right text-red-600">R$ 8,000</td></tr><tr class="bg-green-100 font-bold"><td class="py-1">WITH PUT you sell for:</td><td class="text-right text-green-700">R$ 9,500</td></tr><tr><td class="py-1">Premium paid (insurance cost)</td><td class="text-right text-red-600">-R$ 200</td></tr><tr class="border-t-2 font-bold"><td class="py-1">Final result</td><td class="text-right text-blue-700">R$ 9,300</td></tr></table><p class="text-xs text-green-700 font-bold">PUT saved you from losing an extra R$ 1,300!</p></div><div class="border border-green-200 rounded p-3 bg-green-50"><h5 class="font-bold text-sm mb-2 text-green-800">Scenario B: Price RISES to R$ 110 (great!)</h5><table class="w-full text-sm mb-2"><tr><td class="py-1">Market price rises to</td><td class="text-right">R$ 110</td></tr><tr><td class="py-1">You DON''T exercise the PUT</td><td class="text-right text-gray-600">-</td></tr><tr><td class="py-1">Your 100 shares are worth</td><td class="text-right text-green-600">R$ 11,000</td></tr><tr><td class="py-1">Premium paid (insurance cost)</td><td class="text-right text-red-600">-R$ 200</td></tr><tr class="border-t-2 font-bold"><td class="py-1">Final result</td><td class="text-right text-green-700">R$ 10,800</td></tr></table><p class="text-xs text-gray-700">PUT expired unused. You "spent" R$ 200 on insurance you didn''t need.</p></div></div><div class="bg-purple-50 border-l-4 border-purple-500 p-3 mt-4"><p class="font-bold text-purple-900 mb-2">💡 Summary:</p><p class="text-sm text-gray-700">PUT = Insurance. You KEEP your shares, but have GUARANTEED minimum selling price. If you don''t use it, you only lost the premium (like any unused insurance).</p></div></div>'
+
+    short: '<div class="bg-white rounded-lg p-4 space-y-4"><h4 class="text-lg font-bold mb-3 text-gray-800">SHORT: Short Selling (Very Risky!)</h4><div class="bg-blue-50 border-l-4 border-blue-500 p-3 mb-4"><p class="font-bold text-blue-900 mb-2">💡 Key Point: What is SHORT selling?</p><p class="text-sm text-gray-700">SHORT = Selling something you DON''T own. You <strong>BORROW</strong> shares from someone, SELL them, then must BUY them back to return.</p></div><div class="bg-red-50 border-l-4 border-red-600 p-3 mb-4"><p class="font-bold text-red-900 mb-2">⚠️ WARNING: UNLIMITED RISK!</p><ul class="text-sm text-gray-700 space-y-1 ml-4 list-disc"><li><strong>You DON''T own the shares</strong> - borrowed from someone else</li><li><strong>You MUST return the shares</strong> - it''s an obligation, not an option</li><li><strong>If price RISES:</strong> Loss can be INFINITE (no limit!)</li><li><strong>Borrowing fee:</strong> You pay interest while shares are borrowed</li></ul></div><table class="w-full border-collapse mb-4"><thead><tr class="bg-gray-800 text-white"><th class="border border-gray-600 px-3 py-2">Step</th><th class="border border-gray-600 px-3 py-2">Operation</th><th class="border border-gray-600 px-3 py-2 text-right">Price</th><th class="border border-gray-600 px-3 py-2 text-right">Your Money</th></tr></thead><tbody><tr class="bg-yellow-50"><td class="border border-gray-300 px-3 py-2 font-bold">Day 1</td><td class="border border-gray-300 px-3 py-2">You BORROW 100 shares</td><td class="border border-gray-300 px-3 py-2 text-right">R$ 50</td><td class="border border-gray-300 px-3 py-2 text-right">R$ 0</td></tr><tr class="bg-green-50"><td class="border border-gray-300 px-3 py-2"></td><td class="border border-gray-300 px-3 py-2 font-bold">Sell 100 borrowed shares</td><td class="border border-gray-300 px-3 py-2 text-right">R$ 50</td><td class="border border-gray-300 px-3 py-2 text-right font-bold text-green-700">+R$ 5,000</td></tr><tr class="bg-gray-50"><td class="border border-gray-300 px-3 py-2 font-bold">Month 1</td><td class="border border-gray-300 px-3 py-2">Price DROPS (bet worked!)</td><td class="border border-gray-300 px-3 py-2 text-right text-green-600">R$ 40</td><td class="border border-gray-300 px-3 py-2 text-right">R$ 5,000</td></tr><tr class="bg-blue-50"><td class="border border-gray-300 px-3 py-2"></td><td class="border border-gray-300 px-3 py-2 font-bold">Buy 100 shares back</td><td class="border border-gray-300 px-3 py-2 text-right">R$ 40</td><td class="border border-gray-300 px-3 py-2 text-right text-red-600">-R$ 4,000</td></tr><tr class="bg-blue-50"><td class="border border-gray-300 px-3 py-2"></td><td class="border border-gray-300 px-3 py-2">RETURN 100 borrowed shares</td><td class="border border-gray-300 px-3 py-2 text-right">-</td><td class="border border-gray-300 px-3 py-2 text-right">R$ 1,000</td></tr><tr class="bg-green-100 font-bold"><td colspan="3" class="border border-gray-300 px-3 py-2">Profit (sold R$ 5k, bought R$ 4k)</td><td class="border border-gray-300 px-3 py-2 text-right text-green-700">R$ 1,000</td></tr><tr><td colspan="3" class="border border-gray-300 px-3 py-2 text-sm">Borrowing fee + commission</td><td class="border border-gray-300 px-3 py-2 text-right text-red-600">-R$ 50</td></tr><tr class="bg-green-200 font-bold"><td colspan="3" class="border border-gray-300 px-3 py-2">Net Profit</td><td class="border border-gray-300 px-3 py-2 text-right text-green-800 text-lg">R$ 950</td></tr></tbody></table><div class="bg-red-100 border-2 border-red-600 rounded p-4 mt-4"><h5 class="font-bold text-red-900 mb-3">⚠️ DISASTER SCENARIO: What if price RISES?</h5><table class="w-full text-sm"><tr class="bg-red-200"><td class="py-2 px-3 font-bold">Price rises to R$ 80</td><td class="text-right font-bold text-red-800">Loss: R$ 3,000</td></tr><tr class="bg-red-300"><td class="py-2 px-3 font-bold">Price rises to R$ 100</td><td class="text-right font-bold text-red-900">Loss: R$ 5,000</td></tr><tr class="bg-red-400"><td class="py-2 px-3 font-bold">Price rises to R$ 150</td><td class="text-right font-bold text-white">Loss: R$ 10,000!</td></tr></table><p class="text-sm text-red-900 mt-3 font-bold">You SOLD at R$ 50, but must BUY back at any price to return! The higher it goes, the bigger the loss. NO LIMIT!</p></div><div class="bg-purple-50 border-l-4 border-purple-500 p-3 mt-4"><p class="font-bold text-purple-900 mb-2">💡 Summary:</p><p class="text-sm text-gray-700">SHORT = Bet on decline. You sell borrowed and must return. If it drops, profit. If it RISES, UNLIMITED loss. Only for experienced traders!</p></div></div>'
+
+    long: '<div class="bg-white rounded-lg p-4 space-y-4"><h4 class="text-lg font-bold mb-3 text-gray-800">LONG: Normal Stock Purchase</h4><div class="bg-blue-50 border-l-4 border-blue-500 p-3 mb-4"><p class="font-bold text-blue-900 mb-2">💡 Key Point: What is a LONG position?</p><p class="text-sm text-gray-700">LONG is the <strong>NORMAL way to invest</strong> in stocks. You BUY and become the OWNER of shares. That simple! You profit if price rises.</p></div><div class="bg-yellow-50 border-l-4 border-yellow-500 p-3 mb-4"><p class="font-bold text-yellow-900 mb-2">⚠️ Important: What you OWN and your RIGHTS</p><ul class="text-sm text-gray-700 space-y-1 ml-4 list-disc"><li><strong>You BUY and OWN the shares</strong> - they''re yours!</li><li><strong>Can SELL anytime</strong> - you decide when (not obligated)</li><li><strong>Can HOLD for years</strong> - no expiration date</li><li><strong>Receive dividends</strong> - if company pays, you earn too</li><li><strong>Maximum loss:</strong> What you invested (if stock drops to R$ 0)</li></ul></div><table class="w-full border-collapse mb-4"><thead><tr class="bg-gray-800 text-white"><th class="border border-gray-600 px-3 py-2">Time</th><th class="border border-gray-600 px-3 py-2">Operation</th><th class="border border-gray-600 px-3 py-2 text-right">Price/Share</th><th class="border border-gray-600 px-3 py-2 text-right">Situation</th></tr></thead><tbody><tr class="bg-blue-50"><td class="border border-gray-300 px-3 py-2 font-bold">Today</td><td class="border border-gray-300 px-3 py-2 font-bold">BUY 100 shares</td><td class="border border-gray-300 px-3 py-2 text-right">R$ 50</td><td class="border border-gray-300 px-3 py-2 text-right font-bold text-red-600">Invest R$ 5,000</td></tr><tr class="bg-gray-50"><td class="border border-gray-300 px-3 py-2"></td><td class="border border-gray-300 px-3 py-2 text-sm italic">You own 100 shares now</td><td class="border border-gray-300 px-3 py-2 text-right"></td><td class="border border-gray-300 px-3 py-2 text-right"></td></tr><tr><td class="border border-gray-300 px-3 py-2 font-bold">Month 1</td><td class="border border-gray-300 px-3 py-2">Hold (just watching)</td><td class="border border-gray-300 px-3 py-2 text-right">R$ 55</td><td class="border border-gray-300 px-3 py-2 text-right text-green-600">+R$ 500 unrealized</td></tr><tr><td class="border border-gray-300 px-3 py-2 font-bold">Month 2</td><td class="border border-gray-300 px-3 py-2">Hold (still waiting)</td><td class="border border-gray-300 px-3 py-2 text-right">R$ 60</td><td class="border border-gray-300 px-3 py-2 text-right text-green-600">+R$ 1,000 unrealized</td></tr><tr class="bg-green-50"><td class="border border-gray-300 px-3 py-2 font-bold">Month 3</td><td class="border border-gray-300 px-3 py-2 font-bold">DECIDE TO SELL all</td><td class="border border-gray-300 px-3 py-2 text-right text-green-600">R$ 65</td><td class="border border-gray-300 px-3 py-2 text-right font-bold text-green-700">Receive R$ 6,500</td></tr><tr class="bg-green-100 font-bold"><td colspan="3" class="border border-gray-300 px-3 py-2">Profit (R$ 6,500 - R$ 5,000)</td><td class="border border-gray-300 px-3 py-2 text-right text-green-700 text-lg">R$ 1,500</td></tr><tr><td colspan="3" class="border border-gray-300 px-3 py-2 text-sm">Commission (buy + sell)</td><td class="border border-gray-300 px-3 py-2 text-right text-red-600">-R$ 20</td></tr><tr class="bg-green-200 font-bold"><td colspan="3" class="border border-gray-300 px-3 py-2">Net Profit</td><td class="border border-gray-300 px-3 py-2 text-right text-green-800 text-lg">R$ 1,480</td></tr><tr class="bg-blue-50"><td colspan="3" class="border border-gray-300 px-3 py-2 font-bold">Return</td><td class="border border-gray-300 px-3 py-2 text-right font-bold text-blue-700">29.6%</td></tr></tbody></table><div class="bg-green-50 border-l-4 border-green-500 p-3 mb-4"><p class="font-bold text-green-900 mb-2">💡 YOU DECIDE when to sell:</p><ul class="text-sm text-gray-700 space-y-1 ml-4 list-disc"><li><strong>Could have sold in Month 1</strong> (profit R$ 500)</li><li><strong>Could have sold in Month 2</strong> (profit R$ 1,000)</li><li><strong>Could HOLD longer</strong> (wait for more appreciation)</li><li><strong>YOU choose</strong> - not obligated to sell!</li></ul></div><div class="bg-blue-50 border-l-4 border-blue-500 p-3"><p class="font-bold text-blue-900 mb-2">⚠️ What if price DROPS?</p><p class="text-sm text-gray-700 mb-2">If it drops to R$ 30, your shares are worth R$ 3,000 (R$ 2,000 unrealized loss).</p><p class="text-sm text-gray-700"><strong>YOU DECIDE:</strong> Sell and realize loss OR hold waiting for recovery.</p></div><div class="bg-purple-50 border-l-4 border-purple-500 p-3 mt-4"><p class="font-bold text-purple-900 mb-2">💡 Summary:</p><p class="text-sm text-gray-700">LONG = Traditional investment. Buy, become owner, sell when you want. Risk limited to what you invested. Ideal for beginners!</p></div></div>'
+
+    yield: '<div class="bg-white rounded-lg p-4 space-y-4"><h4 class="text-lg font-bold mb-3 text-gray-800">YIELD: How Much Does Your Money Earn?</h4><div class="bg-blue-50 border-l-4 border-blue-500 p-3 mb-4"><p class="font-bold text-blue-900 mb-2">💡 Key Point: What is Yield?</p><p class="text-sm text-gray-700">Yield is the <strong>percentage you EARN</strong> relative to what you invested. It''s like measuring "how many % per year (or month) your money earns". Used to COMPARE different investments.</p></div><div class="bg-yellow-50 border-l-4 border-yellow-500 p-3 mb-4"><p class="font-bold text-yellow-900 mb-2">⚠️ Important: You DON''T sell to receive Yield!</p><ul class="text-sm text-gray-700 space-y-1 ml-4 list-disc"><li><strong>REITs:</strong> Pay rent EVERY MONTH - you remain owner of quotas</li><li><strong>Stocks:</strong> Pay dividends - you remain owner of shares</li><li><strong>Fixed Income:</strong> Earns automatically - money stays invested</li><li><strong>High yield:</strong> More return, but may have more risk</li></ul></div><p class="text-sm text-gray-700 mb-4 font-bold">Comparison: Investing R$ 10,000 for 12 months</p><table class="w-full border-collapse mb-4"><thead><tr class="bg-gray-800 text-white"><th class="border border-gray-600 px-3 py-2">Investment</th><th class="border border-gray-600 px-3 py-2 text-right">Annual Yield</th><th class="border border-gray-600 px-3 py-2 text-right">You Earn</th><th class="border border-gray-600 px-3 py-2 text-right">Total</th></tr></thead><tbody><tr class="bg-blue-50"><td class="border border-gray-300 px-3 py-2"><strong>CDB 100% CDI</strong><br/><span class="text-xs text-gray-600">Fixed Income (low risk)</span></td><td class="border border-gray-300 px-3 py-2 text-right font-bold">13.75%</td><td class="border border-gray-300 px-3 py-2 text-right text-green-700">R$ 1,375</td><td class="border border-gray-300 px-3 py-2 text-right font-bold">R$ 11,375</td></tr><tr class="bg-gray-50"><td class="border border-gray-300 px-3 py-2 text-xs italic" colspan="4">Money stays invested, earns automatically, pays tax</td></tr><tr class="bg-purple-50"><td class="border border-gray-300 px-3 py-2"><strong>Treasury IPCA+</strong><br/><span class="text-xs text-gray-600">Government (very safe)</span></td><td class="border border-gray-300 px-3 py-2 text-right font-bold">10.50%</td><td class="border border-gray-300 px-3 py-2 text-right text-green-700">R$ 1,050</td><td class="border border-gray-300 px-3 py-2 text-right font-bold">R$ 11,050</td></tr><tr class="bg-gray-50"><td class="border border-gray-300 px-3 py-2 text-xs italic" colspan="4">Protects from inflation + 6% real interest</td></tr><tr class="bg-green-50"><td class="border border-gray-300 px-3 py-2"><strong>REIT (Real Estate Fund)</strong><br/><span class="text-xs text-gray-600">Monthly yield 0.8%</span></td><td class="border border-gray-300 px-3 py-2 text-right font-bold">9.6%</td><td class="border border-gray-300 px-3 py-2 text-right text-green-700">R$ 960</td><td class="border border-gray-300 px-3 py-2 text-right font-bold">R$ 10,960</td></tr><tr class="bg-gray-50"><td class="border border-gray-300 px-3 py-2 text-xs italic" colspan="4">Receive EVERY MONTH (R$ 80/month), tax-free, keep quotas</td></tr><tr class="bg-orange-50"><td class="border border-gray-300 px-3 py-2"><strong>Stock with Dividends</strong><br/><span class="text-xs text-gray-600">Dividend Yield (DY)</span></td><td class="border border-gray-300 px-3 py-2 text-right font-bold">5.0%</td><td class="border border-gray-300 px-3 py-2 text-right text-green-700">R$ 500<br/><span class="text-xs text-blue-600">+ appreciation!</span></td><td class="border border-gray-300 px-3 py-2 text-right font-bold">R$ 10,500+</td></tr><tr class="bg-gray-50"><td class="border border-gray-300 px-3 py-2 text-xs italic" colspan="4">Tax-free dividend + stock can appreciate (extra gain!)</td></tr></tbody></table><div class="bg-green-50 border-l-4 border-green-500 p-3 mb-4"><p class="font-bold text-green-900 mb-2">💡 Understand the difference:</p><ul class="text-sm text-gray-700 space-y-1 ml-4 list-disc"><li><strong>CDB/Treasury:</strong> GUARANTEED yield - you know what you''ll earn</li><li><strong>REIT:</strong> Variable MONTHLY yield - depends on rent received</li><li><strong>Stocks:</strong> Yield (dividends) + stock appreciation = higher total gain!</li></ul></div><div class="bg-purple-50 border-l-4 border-purple-500 p-3 mt-4"><p class="font-bold text-purple-900 mb-2">💡 Summary:</p><p class="text-sm text-gray-700">Yield = Percentage you EARN without selling. High yield = more money in your account. You remain owner of the investment and can gain from appreciation too!</p></div></div>'

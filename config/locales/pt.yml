@@ -1,0 +1,291 @@
+pt:
+  # Locale names
+  locales:
+    en: "Inglês"
+    pt: "Português"
+
+  # Navigation
+  nav:
+    app_name: "Aprendizado de Investimentos"
+    categories: "Categorias"
+    glossary: "Glossário"
+    new_simulation: "Nova Simulação"
+
+  # Common actions
+  actions:
+    back: "Voltar"
+    back_to_categories: "Voltar para Categorias"
+    start_exercise: "Iniciar Exercício"
+    execute_trade: "Executar Negociação"
+    advance_time: "Avançar Tempo (+1 Mês)"
+    create_simulation: "Criar Simulação"
+    cancel: "Cancelar"
+    learn_more: "Saiba Mais"
+    view_all_terms: "Ver todos os termos"
+    clear_filter: "Limpar filtro"
+    explore_categories: "Explorar Categorias de Investimento"
+    view_categories: "Ver Categorias de Investimento"
+    buy: "Comprar"
+    sell: "Vender"
+
+  # Labels
+  labels:
+    current_capital: "Capital Atual"
+    profit_loss: "Lucro/Prejuízo"
+    time_elapsed: "Tempo Decorrido"
+    portfolio_holdings: "Carteira de Investimentos"
+    transaction_history: "Histórico de Transações"
+    current_price: "Preço Atual"
+    action: "Ação"
+    quantity: "Quantidade"
+    price_per_unit: "Preço por Unidade"
+    trading_panel: "Painel de Negociação"
+    time_control: "Controle de Tempo"
+    available_to_invest: "Disponível para investir"
+    current_value: "Valor Atual"
+    avg_price: "Preço Médio"
+    investment_type: "Tipo de Investimento"
+    initial_capital: "Capital Inicial"
+    select_investment_type: "Selecione o Tipo de Investimento"
+    ticker: "Ticker"
+    how_it_works: "Como Funciona"
+    affecting_factors: "Fatores que Afetam"
+    investment_types_in_category: "Tipos de Investimento nesta Categoria"
+    filter_by_category: "Filtrar por Categoria"
+    all_terms: "Todos os Termos"
+    filtering_by: "Filtrando por"
+    example: "Exemplo"
+    related_to: "Relacionado a"
+    definition: "Definição"
+    related_categories: "Categorias Relacionadas"
+    visual_example: "Exemplo Visual"
+    explore_more_terms: "Explorar Mais Termos"
+    continue_building_knowledge: "Continue construindo seu conhecimento em investimentos"
+    browse_categories: "Navegar por Categorias"
+    per_unit: "por unidade"
+
+  # Pluralization
+  plurals:
+    type:
+      one: "tipo"
+      other: "tipos"
+    term:
+      one: "termo"
+      other: "termos"
+    month:
+      one: "mês"
+      other: "meses"
+    unit:
+      one: "unidade"
+      other: "unidades"
+    transaction:
+      one: "transação"
+      other: "transações"
+    error:
+      one: "erro"
+      other: "erros"
+
+  # Page titles and headings
+  pages:
+    categories:
+      title: "Categorias de Investimento"
+      subtitle: "Explore diferentes tipos de investimentos e comece sua jornada de aprendizado"
+    glossary:
+      title: "Glossário de Investimentos"
+      subtitle: "Aprenda termos e conceitos-chave de investimentos"
+    simulation:
+      new_title: "Criar Nova Simulação"
+      new_subtitle: "Configure seu ambiente de prática de investimentos"
+      show_title: "Simulação de Investimento"
+    category_show:
+      ready_to_start: "Pronto para começar a aprender?"
+      create_simulation_prompt: "Crie uma simulação para praticar investimentos nestes tipos"
+
+  # Messages
+  messages:
+    no_categories: "Nenhuma Categoria Disponível"
+    no_categories_detail: "Volte mais tarde para explorar categorias de investimento."
+    no_holdings: "Sem investimentos ainda"
+    no_holdings_detail: "Comece comprando alguns investimentos"
+    no_transactions: "Sem transações ainda"
+    no_terms_found: "Nenhum Termo Encontrado"
+    no_terms_in_category: "Nenhum termo encontrado para a categoria"
+    no_terms_available: "Ainda não há termos no glossário. Volte mais tarde."
+    no_investment_types: "Ainda não há tipos de investimento disponíveis nesta categoria."
+    showing_transactions: "Mostrando 10 de %{count} transações"
+    showing_terms: "Mostrando %{count} %{term}"
+    need_help_choosing: "Precisa de ajuda para escolher?"
+    explore_before_starting: "Explore nossas categorias de investimento para aprender sobre diferentes tipos de investimento antes de iniciar sua simulação."
+    advance_time_description: "Avançar o tempo para ver como seus investimentos se comportam ao longo do tempo."
+
+  # Simulation info
+  simulation:
+    status:
+      active: "Ativa"
+      completed: "Concluída"
+    how_it_works:
+      title: "Como funcionam as simulações:"
+      start_with_capital: "Você começará com seu valor de capital inicial"
+      buy_and_sell: "Compre e venda investimentos para construir seu portfólio"
+      advance_time: "Avance o tempo para ver como seus investimentos se comportam"
+      track_performance: "Acompanhe seu lucro/prejuízo e aprenda estratégias de investimento"
+    form:
+      investment_type_help: "Escolha o tipo de investimento com o qual deseja praticar"
+      initial_capital_help: "Digite o valor de dinheiro com o qual deseja começar"
+      required: "obrigatório"
+      errors_prevented_save: "proibiu que esta simulação fosse salva:"
+
+  # Trading tips
+  trading:
+    tips:
+      title: "Dicas de Negociação"
+      monitor_prices: "Monitore as mudanças de preço ao longo do tempo"
+      diversify: "Diversifique suas participações"
+      consider_risk: "Considere sua tolerância ao risco"
+      learn_from_decisions: "Aprenda com suas decisões"
+
+  # Footer
+  footer:
+    tagline: "Aprendizado de Investimentos - Aprenda a investir através de simulação"
+    built_with: "Construído com Rails e Tailwind CSS"
+
+  # Time helpers
+  time:
+    ago: "atrás"
+
+  # Investment categories
+  categories:
+    renda-fixa:
+      name: "Renda Fixa"
+      description: "Investimentos com rentabilidade previsível, geralmente atrelados a índices como CDI ou IPCA. Ideal para quem busca segurança e renda consistente."
+    renda-variavel:
+      name: "Renda Variável"
+      description: "Investimentos cujo retorno não pode ser determinado previamente, variando conforme o mercado. Oferece potencial de ganhos maiores, mas com mais risco."
+    cdb:
+      name: "CDB"
+      description: "Certificado de Depósito Bancário - título privado emitido por bancos para captar recursos. Protegido pelo FGC até R$ 250 mil."
+    tesouro-direto:
+      name: "Tesouro Direto"
+      description: "Títulos públicos emitidos pelo governo federal. Considerado o investimento mais seguro do Brasil."
+    acoes:
+      name: "Ações"
+      description: "Frações do capital social de empresas negociadas na B3. Ao comprar uma ação, você se torna sócio da empresa."
+    etf:
+      name: "ETF"
+      description: "Exchange Traded Funds - fundos que replicam índices e são negociados como ações na bolsa."
+    fundos-imobiliarios:
+      name: "Fundos Imobiliários"
+      description: "Fundos que investem em imóveis ou títulos do setor imobiliário. Distribuem rendimentos mensais isentos de IR."
+    criptomoedas:
+      name: "Criptomoedas"
+      description: "Moedas digitais descentralizadas baseadas em blockchain. Alta volatilidade e risco."
+
+  # Glossary terms
+  glossary_terms:
+    ipca:
+      term: "IPCA"
+      definition: "Índice de Preços ao Consumidor Amplo - principal indicador de inflação do Brasil, medido pelo IBGE."
+    selic:
+      term: "SELIC"
+      definition: "Sistema Especial de Liquidação e Custódia - taxa básica de juros da economia brasileira, definida pelo COPOM."
+    cdi:
+      term: "CDI"
+      definition: "Certificado de Depósito Interbancário - taxa de empréstimos entre bancos, muito próxima à SELIC."
+    put:
+      term: "PUT"
+      definition: "Opção de venda que dá o direito de vender um ativo a um preço predeterminado."
+    call:
+      term: "CALL"
+      definition: "Opção de compra que dá o direito de comprar um ativo a um preço predeterminado."
+    short:
+      term: "Short"
+      definition: "Venda a descoberto - operação especulativa que lucra com a queda do preço de um ativo."
+    long:
+      term: "Long"
+      definition: "Posição comprada - estratégia de comprar e manter ativos esperando valorização."
+    b3:
+      term: "B3"
+      definition: "Brasil, Bolsa, Balcão - bolsa de valores oficial do Brasil, onde são negociados ações, ETFs e outros ativos."
+    dividendos:
+      term: "Dividendos"
+      definition: "Parcela do lucro de uma empresa distribuída aos acionistas. Isento de Imposto de Renda para pessoa física."
+    yield:
+      term: "Yield"
+      definition: "Rendimento percentual de um investimento em relação ao seu preço. Em FIIs, representa o retorno mensal."
+    liquidez:
+      term: "Liquidez"
+      definition: "Facilidade de converter um ativo em dinheiro sem perda significativa de valor."
+    fgc:
+      term: "FGC"
+      definition: "Fundo Garantidor de Créditos - protege investimentos em Renda Fixa até R$ 250 mil por CPF e instituição."
+    bovespa:
+      term: "Bovespa"
+      definition: "Antiga bolsa de valores de São Paulo, agora parte da B3. Índice Ibovespa representa as principais ações."
+    home_broker:
+      term: "Home Broker"
+      definition: "Plataforma online para negociar ativos na bolsa de valores através de corretoras."
+    diversificacao:
+      term: "Diversificação"
+      definition: "Estratégia de investimento que distribui recursos em diferentes ativos para reduzir risco."
+    volatilidade:
+      term: "Volatilidade"
+      definition: "Medida de variação de preço de um ativo. Alta volatilidade significa maior risco e oportunidade."
+    inflacao:
+      term: "Inflação"
+      definition: "Aumento generalizado de preços na economia. Corrói o poder de compra do dinheiro ao longo do tempo."
+    juros_compostos:
+      term: "Juros Compostos"
+      definition: "Juros calculados sobre o capital inicial mais os juros acumulados. A oitava maravilha do mundo segundo Einstein."
+    aporte:
+      term: "Aporte"
+      definition: "Aplicações regulares de dinheiro em investimentos para aumentar o patrimônio ao longo do tempo."
+    benchmark:
+      term: "Benchmark"
+      definition: "Índice de referência usado para comparar o desempenho de investimentos. Ex: CDI para Renda Fixa."
+    taxa_administracao:
+      term: "Taxa de Administração"
+      definition: "Percentual anual cobrado por fundos para cobrir custos de gestão. Impacta diretamente o retorno do investidor."
+    risco:
+      term: "Risco"
+      definition: "Possibilidade de perdas em um investimento. Geralmente, maior risco oferece potencial de retorno maior."
+    rentabilidade:
+      term: "Rentabilidade"
+      definition: "Ganho financeiro obtido com um investimento em um período, expresso em percentual."
+    custodia:
+      term: "Custódia"
+      definition: "Serviço de guarda e administração de títulos e valores mobiliários. No Brasil, feito pela B3 ou gestores."
+    dy_dividend_yield:
+      term: "DY (Dividend Yield)"
+      definition: "Percentual anual que um ativo paga em dividendos em relação ao seu preço. Usado para comparar renda de ações e FIIs."
+    indice_sharpe:
+      term: "Índice Sharpe"
+      definition: "Medida que avalia o retorno de um investimento ajustado pelo risco assumido. Sharpe maior = melhor relação risco-retorno."
+    p_l_preco_lucro:
+      term: "P/L (Preço/Lucro)"
+      definition: "Razão entre o preço da ação e o lucro da empresa por ação. Indica quantos anos de lucro são necessários para recuperar o investimento."
+    p_vp_preco_valor_patrimonial:
+      term: "P/VP (Preço/Valor Patrimonial)"
+      definition: "Razão entre preço da ação e valor patrimonial por ação. Abaixo de 1,0 pode indicar que a ação está desvalorizada."
+    roe:
+      term: "ROE (Return on Equity)"
+      definition: "Mede a rentabilidade de uma empresa em relação ao patrimônio líquido. Expresso em percentual, indica eficiência em gerar lucro."
+    spread:
+      term: "Spread"
+      definition: "Diferença entre os preços de compra e venda de um ativo. Também se refere à taxa adicional sobre um benchmark em investimentos."
+    aportes:
+      term: "Aportes"
+      definition: "Adições regulares de dinheiro em investimentos ao longo do tempo. Estratégia fundamental para construir patrimônio através de juros compostos."
+
+  # Glossary term visual examples (HTML content)
+  glossary_examples:
+    dividendos: '<div class="bg-white rounded-lg p-4 space-y-4"><h4 class="text-lg font-bold mb-3 text-gray-800">DIVIDENDOS: Ganhe Dinheiro Sem Vender Suas Ações!</h4><div class="bg-blue-50 border-l-4 border-blue-500 p-3 mb-4"><p class="font-bold text-blue-900 mb-2">💡 Key Point: O que são dividendos?</p><p class="text-sm text-gray-700">Dividendos são <strong>PAGAMENTOS em dinheiro</strong> que empresas fazem aos donos das ações (acionistas). É uma parte do lucro que a empresa distribui. Você RECEBE o dinheiro e CONTINUA dono das ações!</p></div><div class="bg-yellow-50 border-l-4 border-yellow-500 p-3 mb-4"><p class="font-bold text-yellow-900 mb-2">⚠️ Important: Como funciona?</p><ul class="text-sm text-gray-700 space-y-1 ml-4 list-disc"><li><strong>Você NÃO vende suas ações</strong> - continua sendo dono delas!</li><li><strong>O dinheiro CAI na sua conta</strong> - automaticamente, sem fazer nada</li><li><strong>Isento de IR</strong> - você não paga imposto sobre dividendos!</li><li><strong>Frequência:</strong> Trimestral, semestral ou anual (depende da empresa)</li><li><strong>Não é garantido:</strong> Empresa pode não pagar se tiver prejuízo</li></ul></div><div class="bg-blue-50 border border-blue-200 rounded p-3 mb-4"><p class="text-sm"><strong>Investimento inicial:</strong> 1.000 ações a R$ 30 cada = <strong class="text-blue-700">R$ 30.000</strong></p><p class="text-xs text-gray-600 mt-2">Você é DONO de 1.000 ações (não vende elas)</p></div><table class="w-full border-collapse mb-4"><thead><tr class="bg-gray-800 text-white"><th class="border border-gray-600 px-3 py-2">Período</th><th class="border border-gray-600 px-3 py-2 text-right">R$ por Ação</th><th class="border border-gray-600 px-3 py-2 text-right">Você Recebe</th><th class="border border-gray-600 px-3 py-2 text-right">Total Acum.</th></tr></thead><tbody><tr class="bg-green-50"><td class="border border-gray-300 px-3 py-2">1º Trimestre</td><td class="border border-gray-300 px-3 py-2 text-right">R$ 0,50</td><td class="border border-gray-300 px-3 py-2 text-right text-green-700 font-bold">R$ 500</td><td class="border border-gray-300 px-3 py-2 text-right">R$ 500</td></tr><tr class="bg-gray-50"><td class="border border-gray-300 px-3 py-2 text-sm italic" colspan="4">Dinheiro caiu na conta! Ações ainda são suas (1.000 ações)</td></tr><tr class="bg-green-50"><td class="border border-gray-300 px-3 py-2">2º Trimestre</td><td class="border border-gray-300 px-3 py-2 text-right">R$ 0,50</td><td class="border border-gray-300 px-3 py-2 text-right text-green-700 font-bold">R$ 500</td><td class="border border-gray-300 px-3 py-2 text-right">R$ 1.000</td></tr><tr class="bg-green-50"><td class="border border-gray-300 px-3 py-2">3º Trimestre</td><td class="border border-gray-300 px-3 py-2 text-right">R$ 0,50</td><td class="border border-gray-300 px-3 py-2 text-right text-green-700 font-bold">R$ 500</td><td class="border border-gray-300 px-3 py-2 text-right">R$ 1.500</td></tr><tr class="bg-green-50"><td class="border border-gray-300 px-3 py-2">4º Trimestre</td><td class="border border-gray-300 px-3 py-2 text-right">R$ 0,50</td><td class="border border-gray-300 px-3 py-2 text-right text-green-700 font-bold">R$ 500</td><td class="border border-gray-300 px-3 py-2 text-right font-bold">R$ 2.000</td></tr><tr class="bg-green-100 font-bold"><td colspan="2" class="border border-gray-300 px-3 py-2">Total Recebido no Ano</td><td class="border border-gray-300 px-3 py-2 text-right text-green-800 text-lg">R$ 2.000</td><td class="border border-gray-300 px-3 py-2 text-right"></td></tr></tbody></table><div class="bg-green-50 border border-green-200 rounded p-3 mb-4"><p class="text-sm font-bold mb-2 text-green-900">Dividend Yield (DY) Anual:</p><p class="text-3xl font-bold text-green-700">6,67%</p><p class="text-xs text-gray-600 mt-2">Cálculo: (R$ 2.000 recebido ÷ R$ 30.000 investido) × 100</p></div><div class="bg-purple-50 border-l-4 border-purple-500 p-3"><p class="font-bold text-purple-900 mb-2">💡 O melhor de tudo:</p><ul class="text-sm text-gray-700 space-y-1 ml-4 list-disc"><li><strong>Suas 1.000 ações continuam sendo suas!</strong></li><li><strong>Elas podem valorizar</strong> (ex: subir para R$ 35, R$ 40...)</li><li><strong>Dividendo é BÔNUS</strong> - renda passiva enquanto mantém as ações</li><li><strong>R$ 2.000 sem IR</strong> - você embolsa tudo!</li></ul></div><div class="bg-blue-50 border-l-4 border-blue-500 p-3 mt-4"><p class="font-bold text-blue-900 mb-2">⚠️ Compare com vender as ações:</p><p class="text-sm text-gray-700">Se você VENDESSE as ações por R$ 32.000 (lucro R$ 2.000), pagaria <strong>15% de IR = R$ 300</strong>. Com dividendos, você recebe R$ 2.000 LIVRES de IR e AINDA é dono das ações!</p></div></div>'
+
+    call: '<div class="bg-white rounded-lg p-4 space-y-4"><h4 class="text-lg font-bold mb-3 text-gray-800">CALL: Aposta na Alta do Preço</h4><div class="bg-blue-50 border-l-4 border-blue-500 p-3 mb-4"><p class="font-bold text-blue-900 mb-2">💡 Key Point: O que é uma opção CALL?</p><p class="text-sm text-gray-700">CALL te dá o <strong>DIREITO de COMPRAR</strong> ações a um preço fixo (strike). Você aposta que o preço vai SUBIR sem precisar comprar as ações agora.</p></div><div class="bg-yellow-50 border-l-4 border-yellow-500 p-3 mb-4"><p class="font-bold text-yellow-900 mb-2">⚠️ Important: O que você POSSUI e o que você PAGA</p><ul class="text-sm text-gray-700 space-y-1 ml-4 list-disc"><li><strong>Você NÃO possui ações inicialmente</strong> - está apenas comprando um DIREITO</li><li><strong>Strike Price R$ 100:</strong> Preço que você tem o DIREITO de comprar (não é obrigação!)</li><li><strong>Prêmio R$ 300:</strong> Custo TOTAL que você paga AGORA para ter esse direito</li><li><strong>Você só exerce se valer a pena:</strong> Se preço < strike, deixa expirar</li></ul></div><table class="w-full border-collapse mb-4"><thead><tr class="bg-gray-100"><th class="border border-gray-300 px-3 py-2 text-left">Situação Inicial</th><th class="border border-gray-300 px-3 py-2 text-right">Valor</th></tr></thead><tbody><tr><td class="border border-gray-300 px-3 py-2">Preço atual da ação no mercado</td><td class="border border-gray-300 px-3 py-2 text-right">R$ 100</td></tr><tr><td class="border border-gray-300 px-3 py-2">Você compra CALL (strike R$ 100) - prêmio pago</td><td class="border border-gray-300 px-3 py-2 text-right text-red-600">-R$ 300</td></tr><tr class="bg-gray-50"><td class="border border-gray-300 px-3 py-2 text-sm italic">Você ainda NÃO possui nenhuma ação</td><td class="border border-gray-300 px-3 py-2 text-right text-gray-600">R$ 0</td></tr></tbody></table><div class="grid grid-cols-1 md:grid-cols-2 gap-4"><div class="border border-green-200 rounded p-3 bg-green-50"><h5 class="font-bold text-sm mb-2 text-green-800">Cenário A: Preço SOBE para R$ 115 (sucesso!)</h5><table class="w-full text-sm mb-2"><tr class="bg-blue-50"><td class="py-1 font-bold" colspan="2">Você EXERCE o CALL:</td></tr><tr><td class="py-1">1. Compra 100 ações a R$ 100</td><td class="text-right text-red-600">-R$ 10.000</td></tr><tr><td class="py-1">2. Vende imediatamente a R$ 115</td><td class="text-right text-green-600">+R$ 11.500</td></tr><tr><td class="py-1">3. Ganho na operação</td><td class="text-right">R$ 1.500</td></tr><tr><td class="py-1">4. Prêmio pago inicialmente</td><td class="text-right text-red-600">-R$ 300</td></tr><tr class="border-t-2 font-bold"><td class="py-1">Lucro líquido final</td><td class="text-right text-green-700">R$ 1.200</td></tr></table><p class="text-xs text-green-700 font-bold bg-green-100 p-2 rounded">ROI: 400%! (investiu R$ 300, ganhou R$ 1.200)</p></div><div class="border border-red-200 rounded p-3 bg-red-50"><h5 class="font-bold text-sm mb-2 text-red-800">Cenário B: Preço LATERAL em R$ 98 (não subiu)</h5><table class="w-full text-sm mb-2"><tr><td class="py-1">Preço de mercado</td><td class="text-right">R$ 98</td></tr><tr><td class="py-1">Strike do seu CALL</td><td class="text-right">R$ 100</td></tr><tr class="bg-yellow-50"><td class="py-1 font-bold" colspan="2">Você NÃO EXERCE (não vale a pena):</td></tr><tr><td class="py-1 text-xs" colspan="2">Por quê? Comprar a R$ 100 e vender a R$ 98 = prejuízo!</td></tr><tr><td class="py-1">CALL expira sem valor</td><td class="text-right text-gray-600">R$ 0</td></tr><tr class="border-t-2 font-bold"><td class="py-1">Perda total</td><td class="text-right text-red-600">-R$ 300</td></tr></table><p class="text-xs text-gray-700 bg-gray-100 p-2 rounded">Você perdeu apenas o prêmio. Não comprou nenhuma ação.</p></div></div><div class="bg-purple-50 border-l-4 border-purple-500 p-3 mt-4"><p class="font-bold text-purple-900 mb-2">💡 Resumindo:</p><p class="text-sm text-gray-700">CALL = Aposta na alta. Você paga R$ 300 por um DIREITO. Se preço sobe muito, lucro gigante! Se não sobe, perde só os R$ 300. Você NUNCA é obrigado a comprar as ações.</p></div></div>'
+
+    put: '<div class="bg-white rounded-lg p-4 space-y-4"><h4 class="text-lg font-bold mb-3 text-gray-800">PUT: Seguro Contra Queda de Preços</h4><div class="bg-blue-50 border-l-4 border-blue-500 p-3 mb-4"><p class="font-bold text-blue-900 mb-2">💡 Key Point: O que é uma opção PUT?</p><p class="text-sm text-gray-700">PUT é como um <strong>seguro para suas ações</strong>. Você PAGA um prêmio para ter o DIREITO (não obrigação) de VENDER suas ações a um preço fixo, mesmo se o mercado cair.</p></div><div class="bg-yellow-50 border-l-4 border-yellow-500 p-3 mb-4"><p class="font-bold text-yellow-900 mb-2">⚠️ Important: O que você POSSUI e o que você PAGA</p><ul class="text-sm text-gray-700 space-y-1 ml-4 list-disc"><li><strong>Você JÁ POSSUI:</strong> 100 ações da empresa (compradas antes)</li><li><strong>Strike Price R$ 95:</strong> Preço fixo que você TEM O DIREITO de vender</li><li><strong>Prêmio R$ 200:</strong> Custo do seguro (você PAGA isso agora, não volta)</li><li><strong>Você NÃO é obrigado:</strong> Só vende se quiser (se for vantajoso)</li></ul></div><table class="w-full border-collapse mb-4"><thead><tr class="bg-gray-100"><th class="border border-gray-300 px-3 py-2 text-left">Situação Inicial</th><th class="border border-gray-300 px-3 py-2 text-right">Valor</th></tr></thead><tbody><tr><td class="border border-gray-300 px-3 py-2">Você possui 100 ações a R$ 100 cada</td><td class="border border-gray-300 px-3 py-2 text-right">R$ 10.000</td></tr><tr><td class="border border-gray-300 px-3 py-2">Compra PUT (strike R$ 95) - prêmio pago</td><td class="border border-gray-300 px-3 py-2 text-right text-red-600">-R$ 200</td></tr></tbody></table><div class="grid grid-cols-1 md:grid-cols-2 gap-4"><div class="border border-red-200 rounded p-3 bg-red-50"><h5 class="font-bold text-sm mb-2 text-red-800">Cenário A: Preço CAI para R$ 80 (desastre!)</h5><table class="w-full text-sm mb-2"><tr><td class="py-1">Preço de mercado cai para</td><td class="text-right">R$ 80</td></tr><tr><td class="py-1">Sem PUT você venderia por:</td><td class="text-right text-red-600">R$ 8.000</td></tr><tr class="bg-green-100 font-bold"><td class="py-1">COM PUT você vende por:</td><td class="text-right text-green-700">R$ 9.500</td></tr><tr><td class="py-1">Prêmio pago (custo do seguro)</td><td class="text-right text-red-600">-R$ 200</td></tr><tr class="border-t-2 font-bold"><td class="py-1">Resultado final</td><td class="text-right text-blue-700">R$ 9.300</td></tr></table><p class="text-xs text-green-700 font-bold">PUT te salvou de perder R$ 1.300 extras!</p></div><div class="border border-green-200 rounded p-3 bg-green-50"><h5 class="font-bold text-sm mb-2 text-green-800">Cenário B: Preço SOBE para R$ 110 (ótimo!)</h5><table class="w-full text-sm mb-2"><tr><td class="py-1">Preço de mercado sobe para</td><td class="text-right">R$ 110</td></tr><tr><td class="py-1">Você NÃO exerce o PUT</td><td class="text-right text-gray-600">-</td></tr><tr><td class="py-1">Suas 100 ações valem</td><td class="text-right text-green-600">R$ 11.000</td></tr><tr><td class="py-1">Prêmio pago (custo do seguro)</td><td class="text-right text-red-600">-R$ 200</td></tr><tr class="border-t-2 font-bold"><td class="py-1">Resultado final</td><td class="text-right text-green-700">R$ 10.800</td></tr></table><p class="text-xs text-gray-700">PUT expirou sem uso. Você "gastou" R$ 200 no seguro que não precisou.</p></div></div><div class="bg-purple-50 border-l-4 border-purple-500 p-3 mt-4"><p class="font-bold text-purple-900 mb-2">💡 Resumindo:</p><p class="text-sm text-gray-700">PUT = Seguro. Você MANTÉM suas ações, mas tem GARANTIA de preço mínimo de venda. Se não usar, perdeu só o prêmio (como qualquer seguro não utilizado).</p></div></div>'
+
+    short: '<div class="bg-white rounded-lg p-4 space-y-4"><h4 class="text-lg font-bold mb-3 text-gray-800">SHORT: Venda a Descoberto (Muito Arriscado!)</h4><div class="bg-blue-50 border-l-4 border-blue-500 p-3 mb-4"><p class="font-bold text-blue-900 mb-2">💡 Key Point: O que é operação SHORT?</p><p class="text-sm text-gray-700">SHORT = Vender algo que você NÃO possui. Você <strong>PEGA EMPRESTADO</strong> ações de alguém, VENDE elas, e depois precisa COMPRAR de volta para devolver.</p></div><div class="bg-red-50 border-l-4 border-red-600 p-3 mb-4"><p class="font-bold text-red-900 mb-2">⚠️ WARNING: RISCO ILIMITADO!</p><ul class="text-sm text-gray-700 space-y-1 ml-4 list-disc"><li><strong>Você NÃO possui as ações</strong> - pegou emprestado de outra pessoa</li><li><strong>Você DEVE devolver as ações</strong> - é uma obrigação, não uma opção</li><li><strong>Se o preço SUBIR:</strong> Prejuízo pode ser INFINITO (não tem limite!)</li><li><strong>Taxa de empréstimo:</strong> Você paga juros enquanto as ações estão emprestadas</li></ul></div><table class="w-full border-collapse mb-4"><thead><tr class="bg-gray-800 text-white"><th class="border border-gray-600 px-3 py-2">Passo</th><th class="border border-gray-600 px-3 py-2">Operação</th><th class="border border-gray-600 px-3 py-2 text-right">Preço</th><th class="border border-gray-600 px-3 py-2 text-right">Seu Dinheiro</th></tr></thead><tbody><tr class="bg-yellow-50"><td class="border border-gray-300 px-3 py-2 font-bold">Dia 1</td><td class="border border-gray-300 px-3 py-2">Você PEGA EMPRESTADO 100 ações</td><td class="border border-gray-300 px-3 py-2 text-right">R$ 50</td><td class="border border-gray-300 px-3 py-2 text-right">R$ 0</td></tr><tr class="bg-green-50"><td class="border border-gray-300 px-3 py-2"></td><td class="border border-gray-300 px-3 py-2 font-bold">Vende as 100 ações emprestadas</td><td class="border border-gray-300 px-3 py-2 text-right">R$ 50</td><td class="border border-gray-300 px-3 py-2 text-right font-bold text-green-700">+R$ 5.000</td></tr><tr class="bg-gray-50"><td class="border border-gray-300 px-3 py-2 font-bold">Mês 1</td><td class="border border-gray-300 px-3 py-2">Preço CAI (aposta deu certo!)</td><td class="border border-gray-300 px-3 py-2 text-right text-green-600">R$ 40</td><td class="border border-gray-300 px-3 py-2 text-right">R$ 5.000</td></tr><tr class="bg-blue-50"><td class="border border-gray-300 px-3 py-2"></td><td class="border border-gray-300 px-3 py-2 font-bold">Compra 100 ações de volta</td><td class="border border-gray-300 px-3 py-2 text-right">R$ 40</td><td class="border border-gray-300 px-3 py-2 text-right text-red-600">-R$ 4.000</td></tr><tr class="bg-blue-50"><td class="border border-gray-300 px-3 py-2"></td><td class="border border-gray-300 px-3 py-2">DEVOLVE as 100 ações emprestadas</td><td class="border border-gray-300 px-3 py-2 text-right">-</td><td class="border border-gray-300 px-3 py-2 text-right">R$ 1.000</td></tr><tr class="bg-green-100 font-bold"><td colspan="3" class="border border-gray-300 px-3 py-2">Lucro (vendeu R$ 5k, comprou R$ 4k)</td><td class="border border-gray-300 px-3 py-2 text-right text-green-700">R$ 1.000</td></tr><tr><td colspan="3" class="border border-gray-300 px-3 py-2 text-sm">Taxa de empréstimo + corretagem</td><td class="border border-gray-300 px-3 py-2 text-right text-red-600">-R$ 50</td></tr><tr class="bg-green-200 font-bold"><td colspan="3" class="border border-gray-300 px-3 py-2">Lucro Líquido Final</td><td class="border border-gray-300 px-3 py-2 text-right text-green-800 text-lg">R$ 950</td></tr></tbody></table><div class="bg-red-100 border-2 border-red-600 rounded p-4 mt-4"><h5 class="font-bold text-red-900 mb-3">⚠️ CENÁRIO DESASTRE: E se o preço SUBIR?</h5><table class="w-full text-sm"><tr class="bg-red-200"><td class="py-2 px-3 font-bold">Preço sobe para R$ 80</td><td class="text-right font-bold text-red-800">Prejuízo: R$ 3.000</td></tr><tr class="bg-red-300"><td class="py-2 px-3 font-bold">Preço sobe para R$ 100</td><td class="text-right font-bold text-red-900">Prejuízo: R$ 5.000</td></tr><tr class="bg-red-400"><td class="py-2 px-3 font-bold">Preço sobe para R$ 150</td><td class="text-right font-bold text-white">Prejuízo: R$ 10.000!</td></tr></table><p class="text-sm text-red-900 mt-3 font-bold">Você VENDEU a R$ 50, mas precisa COMPRAR de volta a qualquer preço para devolver! Quanto mais sobe, maior o prejuízo. SEM LIMITE!</p></div><div class="bg-purple-50 border-l-4 border-purple-500 p-3 mt-4"><p class="font-bold text-purple-900 mb-2">💡 Resumindo:</p><p class="text-sm text-gray-700">SHORT = Apostar na queda. Você vende emprestado e deve devolver. Se cai, lucra. Se SOBE, prejuízo ILIMITADO. Só para traders experientes!</p></div></div>'
+
+    long: '<div class="bg-white rounded-lg p-4 space-y-4"><h4 class="text-lg font-bold mb-3 text-gray-800">LONG: Compra Normal de Ações</h4><div class="bg-blue-50 border-l-4 border-blue-500 p-3 mb-4"><p class="font-bold text-blue-900 mb-2">💡 Key Point: O que é posição LONG?</p><p class="text-sm text-gray-700">LONG é a forma <strong>NORMAL de investir</strong> em ações. Você COMPRA e se torna DONO das ações. Simples assim! Lucra se o preço subir.</p></div><div class="bg-yellow-50 border-l-4 border-yellow-500 p-3 mb-4"><p class="font-bold text-yellow-900 mb-2">⚠️ Important: O que você POSSUI e seus DIREITOS</p><ul class="text-sm text-gray-700 space-y-1 ml-4 list-disc"><li><strong>Você COMPRA e é DONO das ações</strong> - elas são suas!</li><li><strong>Pode VENDER a qualquer momento</strong> - você decide quando (não é obrigado)</li><li><strong>Pode MANTER por anos</strong> - não há prazo de validade</li><li><strong>Recebe dividendos</strong> - se a empresa pagar, você ganha também</li><li><strong>Perda máxima:</strong> O que você investiu (se ação cair a R$ 0)</li></ul></div><table class="w-full border-collapse mb-4"><thead><tr class="bg-gray-800 text-white"><th class="border border-gray-600 px-3 py-2">Momento</th><th class="border border-gray-600 px-3 py-2">Operação</th><th class="border border-gray-600 px-3 py-2 text-right">Preço/Ação</th><th class="border border-gray-600 px-3 py-2 text-right">Situação</th></tr></thead><tbody><tr class="bg-blue-50"><td class="border border-gray-300 px-3 py-2 font-bold">Hoje</td><td class="border border-gray-300 px-3 py-2 font-bold">COMPRA 100 ações</td><td class="border border-gray-300 px-3 py-2 text-right">R$ 50</td><td class="border border-gray-300 px-3 py-2 text-right font-bold text-red-600">Investe R$ 5.000</td></tr><tr class="bg-gray-50"><td class="border border-gray-300 px-3 py-2"></td><td class="border border-gray-300 px-3 py-2 text-sm italic">Você é dono de 100 ações agora</td><td class="border border-gray-300 px-3 py-2 text-right"></td><td class="border border-gray-300 px-3 py-2 text-right"></td></tr><tr><td class="border border-gray-300 px-3 py-2 font-bold">Mês 1</td><td class="border border-gray-300 px-3 py-2">Mantém (apenas observa)</td><td class="border border-gray-300 px-3 py-2 text-right">R$ 55</td><td class="border border-gray-300 px-3 py-2 text-right text-green-600">+R$ 500 no papel</td></tr><tr><td class="border border-gray-300 px-3 py-2 font-bold">Mês 2</td><td class="border border-gray-300 px-3 py-2">Mantém (ainda esperando)</td><td class="border border-gray-300 px-3 py-2 text-right">R$ 60</td><td class="border border-gray-300 px-3 py-2 text-right text-green-600">+R$ 1.000 no papel</td></tr><tr class="bg-green-50"><td class="border border-gray-300 px-3 py-2 font-bold">Mês 3</td><td class="border border-gray-300 px-3 py-2 font-bold">DECIDE VENDER todas</td><td class="border border-gray-300 px-3 py-2 text-right text-green-600">R$ 65</td><td class="border border-gray-300 px-3 py-2 text-right font-bold text-green-700">Recebe R$ 6.500</td></tr><tr class="bg-green-100 font-bold"><td colspan="3" class="border border-gray-300 px-3 py-2">Lucro (R$ 6.500 - R$ 5.000)</td><td class="border border-gray-300 px-3 py-2 text-right text-green-700 text-lg">R$ 1.500</td></tr><tr><td colspan="3" class="border border-gray-300 px-3 py-2 text-sm">Corretagem (compra + venda)</td><td class="border border-gray-300 px-3 py-2 text-right text-red-600">-R$ 20</td></tr><tr class="bg-green-200 font-bold"><td colspan="3" class="border border-gray-300 px-3 py-2">Lucro Líquido Final</td><td class="border border-gray-300 px-3 py-2 text-right text-green-800 text-lg">R$ 1.480</td></tr><tr class="bg-blue-50"><td colspan="3" class="border border-gray-300 px-3 py-2 font-bold">Rentabilidade</td><td class="border border-gray-300 px-3 py-2 text-right font-bold text-blue-700">29,6%</td></tr></tbody></table><div class="bg-green-50 border-l-4 border-green-500 p-3 mb-4"><p class="font-bold text-green-900 mb-2">💡 Você DECIDE quando vender:</p><ul class="text-sm text-gray-700 space-y-1 ml-4 list-disc"><li><strong>Poderia ter vendido no Mês 1</strong> (lucro R$ 500)</li><li><strong>Poderia ter vendido no Mês 2</strong> (lucro R$ 1.000)</li><li><strong>Poderia MANTER mais tempo</strong> (esperar subir mais)</li><li><strong>VOCÊ escolhe</strong> - não é obrigado a vender!</li></ul></div><div class="bg-blue-50 border-l-4 border-blue-500 p-3"><p class="font-bold text-blue-900 mb-2">⚠️ E se o preço CAIR?</p><p class="text-sm text-gray-700 mb-2">Se cair para R$ 30, suas ações valem R$ 3.000 (prejuízo de R$ 2.000 no papel).</p><p class="text-sm text-gray-700"><strong>VOCÊ DECIDE:</strong> Vende e realiza prejuízo OU mantém esperando recuperar.</p></div><div class="bg-purple-50 border-l-4 border-purple-500 p-3 mt-4"><p class="font-bold text-purple-900 mb-2">💡 Resumindo:</p><p class="text-sm text-gray-700">LONG = Investimento tradicional. Compra, vira dono, vende quando quiser. Risco limitado ao que investiu. Ideal para iniciantes!</p></div></div>'
+
+    yield: '<div class="bg-white rounded-lg p-4 space-y-4"><h4 class="text-lg font-bold mb-3 text-gray-800">YIELD: Quanto Rende Seu Dinheiro?</h4><div class="bg-blue-50 border-l-4 border-blue-500 p-3 mb-4"><p class="font-bold text-blue-900 mb-2">💡 Key Point: O que é Yield?</p><p class="text-sm text-gray-700">Yield é a <strong>porcentagem que você GANHA</strong> em relação ao que investiu. É como medir "quantos % por ano (ou mês) seu dinheiro rende". Serve para COMPARAR investimentos diferentes.</p></div><div class="bg-yellow-50 border-l-4 border-yellow-500 p-3 mb-4"><p class="font-bold text-yellow-900 mb-2">⚠️ Important: Você NÃO vende para receber o Yield!</p><ul class="text-sm text-gray-700 space-y-1 ml-4 list-disc"><li><strong>FIIs:</strong> Pagam aluguel TODO MÊS - você continua dono das cotas</li><li><strong>Ações:</strong> Pagam dividendos - você continua dono das ações</li><li><strong>Renda Fixa:</strong> Rende automaticamente - dinheiro fica aplicado</li><li><strong>Yield alto:</strong> Mais rendimento, mas pode ter mais risco</li></ul></div><p class="text-sm text-gray-700 mb-4 font-bold">Comparação: Investindo R$ 10.000 por 12 meses</p><table class="w-full border-collapse mb-4"><thead><tr class="bg-gray-800 text-white"><th class="border border-gray-600 px-3 py-2">Investimento</th><th class="border border-gray-600 px-3 py-2 text-right">Yield Anual</th><th class="border border-gray-600 px-3 py-2 text-right">Você Ganha</th><th class="border border-gray-600 px-3 py-2 text-right">Total</th></tr></thead><tbody><tr class="bg-blue-50"><td class="border border-gray-300 px-3 py-2"><strong>CDB 100% CDI</strong><br/><span class="text-xs text-gray-600">Renda Fixa (baixo risco)</span></td><td class="border border-gray-300 px-3 py-2 text-right font-bold">13,75%</td><td class="border border-gray-300 px-3 py-2 text-right text-green-700">R$ 1.375</td><td class="border border-gray-300 px-3 py-2 text-right font-bold">R$ 11.375</td></tr><tr class="bg-gray-50"><td class="border border-gray-300 px-3 py-2 text-xs italic" colspan="4">Seu dinheiro fica aplicado, rende automático, paga IR</td></tr><tr class="bg-purple-50"><td class="border border-gray-300 px-3 py-2"><strong>Tesouro IPCA+</strong><br/><span class="text-xs text-gray-600">Governo (muito seguro)</span></td><td class="border border-gray-300 px-3 py-2 text-right font-bold">10,50%</td><td class="border border-gray-300 px-3 py-2 text-right text-green-700">R$ 1.050</td><td class="border border-gray-300 px-3 py-2 text-right font-bold">R$ 11.050</td></tr><tr class="bg-gray-50"><td class="border border-gray-300 px-3 py-2 text-xs italic" colspan="4">Protege da inflação + juros real de 6%</td></tr><tr class="bg-green-50"><td class="border border-gray-300 px-3 py-2"><strong>FII (Fundo Imobiliário)</strong><br/><span class="text-xs text-gray-600">Yield mensal 0,8%</span></td><td class="border border-gray-300 px-3 py-2 text-right font-bold">9,6%</td><td class="border border-gray-300 px-3 py-2 text-right text-green-700">R$ 960</td><td class="border border-gray-300 px-3 py-2 text-right font-bold">R$ 10.960</td></tr><tr class="bg-gray-50"><td class="border border-gray-300 px-3 py-2 text-xs italic" colspan="4">Recebe TODO MÊS (R$ 80/mês), isento IR, mantém as cotas</td></tr><tr class="bg-orange-50"><td class="border border-gray-300 px-3 py-2"><strong>Ação com Dividendos</strong><br/><span class="text-xs text-gray-600">Dividend Yield (DY)</span></td><td class="border border-gray-300 px-3 py-2 text-right font-bold">5,0%</td><td class="border border-gray-300 px-3 py-2 text-right text-green-700">R$ 500<br/><span class="text-xs text-blue-600">+ valorização!</span></td><td class="border border-gray-300 px-3 py-2 text-right font-bold">R$ 10.500+</td></tr><tr class="bg-gray-50"><td class="border border-gray-300 px-3 py-2 text-xs italic" colspan="4">Dividendo isento IR + ação pode subir de preço (ganho extra!)</td></tr></tbody></table><div class="bg-green-50 border-l-4 border-green-500 p-3 mb-4"><p class="font-bold text-green-900 mb-2">💡 Entenda a diferença:</p><ul class="text-sm text-gray-700 space-y-1 ml-4 list-disc"><li><strong>CDB/Tesouro:</strong> Yield GARANTIDO - você sabe quanto vai ganhar</li><li><strong>FII:</strong> Yield MENSAL variável - depende dos aluguéis recebidos</li><li><strong>Ações:</strong> Yield (dividendos) + valorização da ação = ganho total maior!</li></ul></div><div class="bg-purple-50 border-l-4 border-purple-500 p-3 mt-4"><p class="font-bold text-purple-900 mb-2">💡 Resumindo:</p><p class="text-sm text-gray-700">Yield = Porcentagem que você GANHA sem vender. Alto yield = mais dinheiro na sua conta. Você continua dono do investimento e pode ganhar com valorização também!</p></div></div>'

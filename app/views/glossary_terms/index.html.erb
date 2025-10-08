@@ -1,0 +1,111 @@
+<div class="max-w-6xl mx-auto">
+  <div class="mb-8">
+    <h1 class="text-4xl font-bold text-gray-900 mb-2"><%= t('pages.glossary.title') %></h1>
+    <p class="text-lg text-gray-600"><%= t('pages.glossary.subtitle') %></p>
+  </div>
+
+  <div class="bg-white rounded-lg shadow-md mb-6">
+    <div class="p-6 border-b border-gray-200">
+      <h2 class="text-lg font-semibold text-gray-900 mb-4"><%= t('labels.filter_by_category') %></h2>
+      <div class="flex flex-wrap gap-2">
+        <%= link_to t('labels.all_terms'), glossary_terms_path, class: "px-4 py-2 rounded-lg font-medium transition duration-200 #{params[:category].blank? ? 'bg-indigo-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}" %>
+
+        <% categories = InvestmentCategory.pluck(:name).uniq.sort %>
+        <% categories.each do |category| %>
+          <%= link_to category, glossary_terms_path(category: category), class: "px-4 py-2 rounded-lg font-medium transition duration-200 #{params[:category] == category ? 'bg-indigo-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}" %>
+        <% end %>
+      </div>
+    </div>
+
+    <% if params[:category].present? %>
+      <div class="p-4 bg-blue-50 border-b border-blue-100">
+        <div class="flex items-center justify-between">
+          <p class="text-blue-800">
+            <span class="font-medium"><%= t('labels.filtering_by') %>:</span> <%= params[:category] %>
+          </p>
+          <%= link_to t('actions.clear_filter'), glossary_terms_path, class: "text-blue-600 hover:text-blue-700 font-medium" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <% if @glossary_terms.any? %>
+    <div class="bg-white rounded-lg shadow-md divide-y divide-gray-200">
+      <% current_letter = nil %>
+      <% @glossary_terms.each do |term| %>
+        <% first_letter = term.term[0].upcase %>
+        <% if first_letter != current_letter %>
+          <% current_letter = first_letter %>
+          <div class="bg-gray-50 px-6 py-3 sticky top-0 z-10">
+            <h2 class="text-2xl font-bold text-indigo-600"><%= current_letter %></h2>
+          </div>
+        <% end %>
+
+        <%= link_to glossary_term_path(term), class: "block" do %>
+          <div class="p-6 hover:bg-gray-50 transition-colors duration-200 cursor-pointer">
+            <div class="flex items-start">
+              <div class="flex-shrink-0 w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center mr-4">
+                <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                </svg>
+              </div>
+              <div class="flex-1">
+                <div class="flex items-start justify-between">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2"><%= term.translated_term %></h3>
+                  <% if term.example_scenario.present? %>
+                    <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                      <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z"/>
+                      </svg>
+                      <%= t('labels.example') %>
+                    </span>
+                  <% end %>
+                </div>
+                <p class="text-gray-700 leading-relaxed mb-3"><%= term.translated_definition %></p>
+
+                <% if term.related_categories.present? && term.related_categories.any? %>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="text-sm text-gray-500 mr-2"><%= t('labels.related_to') %>:</span>
+                    <% term.related_categories.each do |category| %>
+                      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800">
+                        <%= category %>
+                      </span>
+                    <% end %>
+                  </div>
+                <% end %>
+              </div>
+              <svg class="w-6 h-6 text-gray-400 flex-shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+
+    <div class="mt-6 bg-white rounded-lg shadow-md p-6">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center">
+          <svg class="w-6 h-6 text-indigo-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <p class="text-gray-700"><%= t('messages.showing_terms', count: @glossary_terms.count, term: pluralize(@glossary_terms.count, t('plurals.term.one'), t('plurals.term.other'))) %></p>
+        </div>
+        <%= link_to t('actions.explore_categories'), investment_categories_path, class: "text-indigo-600 hover:text-indigo-700 font-medium inline-flex items-center" %>
+      </div>
+    </div>
+  <% else %>
+    <div class="bg-white rounded-lg shadow-md p-12 text-center">
+      <svg class="w-16 h-16 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+      </svg>
+      <h3 class="text-xl font-semibold text-gray-700 mb-2"><%= t('messages.no_terms_found') %></h3>
+      <% if params[:category].present? %>
+        <p class="text-gray-500 mb-4"><%= t('messages.no_terms_in_category') %> "<%= params[:category] %>"</p>
+        <%= link_to t('actions.view_all_terms'), glossary_terms_path, class: "text-indigo-600 hover:text-indigo-700 font-medium" %>
+      <% else %>
+        <p class="text-gray-500"><%= t('messages.no_terms_available') %></p>
+      <% end %>
+    </div>
+  <% end %>
+</div>

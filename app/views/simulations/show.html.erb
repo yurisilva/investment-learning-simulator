@@ -1,0 +1,221 @@
+<div class="max-w-7xl mx-auto">
+  <div class="mb-6 flex items-center justify-between">
+    <%= link_to investment_categories_path, class: "inline-flex items-center text-indigo-600 hover:text-indigo-700 font-medium" do %>
+      <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+      <%= t('actions.back_to_categories') %>
+    <% end %>
+    <span class="px-4 py-2 rounded-full text-sm font-semibold <%= @simulation.active? ? 'bg-green-100 text-green-800' : 'bg-gray-100 text-gray-800' %>">
+      <%= @simulation.status.humanize %>
+    </span>
+  </div>
+
+  <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg shadow-lg p-8 text-white mb-6">
+    <h1 class="text-3xl font-bold mb-2"><%= t('pages.simulation.show_title') %></h1>
+    <p class="text-lg text-indigo-100">
+      <%= @simulation.investment_type.name %>
+      <%= " (#{@simulation.investment_type.ticker_symbol})" if @simulation.investment_type.ticker_symbol.present? %>
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+    <div class="bg-white rounded-lg shadow-md p-6">
+      <div class="flex items-center justify-between mb-2">
+        <span class="text-sm font-medium text-gray-600"><%= t('labels.current_capital') %></span>
+        <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      </div>
+      <p class="text-3xl font-bold text-gray-900">$<%= number_with_delimiter(@simulation.current_capital, delimiter: ',') %></p>
+      <p class="text-sm text-gray-500 mt-1"><%= t('labels.available_to_invest') %></p>
+    </div>
+
+    <div class="bg-white rounded-lg shadow-md p-6">
+      <div class="flex items-center justify-between mb-2">
+        <span class="text-sm font-medium text-gray-600"><%= t('labels.profit_loss') %></span>
+        <svg class="w-5 h-5 <%= @simulation.profit_loss >= 0 ? 'text-green-600' : 'text-red-600' %>" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+      </div>
+      <p class="text-3xl font-bold <%= @simulation.profit_loss >= 0 ? 'text-green-600' : 'text-red-600' %>">
+        <%= @simulation.profit_loss >= 0 ? '+' : '' %>$<%= number_with_delimiter(@simulation.profit_loss, delimiter: ',') %>
+      </p>
+      <p class="text-sm <%= @simulation.profit_loss >= 0 ? 'text-green-600' : 'text-red-600' %> font-medium mt-1">
+        <%= @simulation.profit_loss >= 0 ? '+' : '' %><%= @simulation.profit_loss_percentage %>%
+      </p>
+    </div>
+
+    <div class="bg-white rounded-lg shadow-md p-6">
+      <div class="flex items-center justify-between mb-2">
+        <span class="text-sm font-medium text-gray-600"><%= t('labels.time_elapsed') %></span>
+        <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      </div>
+      <p class="text-3xl font-bold text-gray-900"><%= @simulation.months_elapsed %></p>
+      <p class="text-sm text-gray-500 mt-1"><%= pluralize(@simulation.months_elapsed, t('plurals.month.one'), t('plurals.month.other')) %></p>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <div class="lg:col-span-2 space-y-6">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
+          <h2 class="text-xl font-bold text-gray-900"><%= t('labels.portfolio_holdings') %></h2>
+        </div>
+        <div class="p-6">
+          <% if @portfolios.any? %>
+            <div class="space-y-4">
+              <% @portfolios.each do |portfolio| %>
+                <% current_price = portfolio.investment_type.base_price %>
+                <% pl = portfolio.profit_loss(current_price) %>
+                <div class="border border-gray-200 rounded-lg p-4 hover:border-indigo-300 transition-colors duration-200">
+                  <div class="flex items-start justify-between mb-3">
+                    <div>
+                      <h3 class="font-bold text-gray-900 text-lg"><%= portfolio.investment_type.name %></h3>
+                      <%= content_tag(:p, portfolio.investment_type.ticker_symbol, class: "text-sm text-gray-500") if portfolio.investment_type.ticker_symbol.present? %>
+                    </div>
+                    <div class="text-right">
+                      <p class="text-lg font-bold text-gray-900">$<%= number_with_delimiter(portfolio.total_value(current_price), delimiter: ',') %></p>
+                      <p class="text-sm text-gray-500"><%= t('labels.current_value') %></p>
+                    </div>
+                  </div>
+                  <div class="grid grid-cols-4 gap-4 text-sm">
+                    <div>
+                      <p class="text-gray-600 mb-1"><%= t('labels.quantity') %></p>
+                      <p class="font-semibold text-gray-900"><%= portfolio.quantity %></p>
+                    </div>
+                    <div>
+                      <p class="text-gray-600 mb-1"><%= t('labels.avg_price') %></p>
+                      <p class="font-semibold text-gray-900">$<%= number_with_delimiter(portfolio.average_price || 0, delimiter: ',') %></p>
+                    </div>
+                    <div>
+                      <p class="text-gray-600 mb-1"><%= t('labels.current_price') %></p>
+                      <p class="font-semibold text-gray-900">$<%= number_with_delimiter(current_price, delimiter: ',') %></p>
+                    </div>
+                    <div>
+                      <p class="text-gray-600 mb-1">P/L</p>
+                      <p class="font-semibold <%= pl >= 0 ? 'text-green-600' : 'text-red-600' %>">
+                        <%= pl >= 0 ? '+' : '' %>$<%= number_with_delimiter(pl, delimiter: ',') %>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          <% else %>
+            <div class="text-center py-8">
+              <svg class="w-16 h-16 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"/></svg>
+              <p class="text-gray-600 font-medium"><%= t('messages.no_holdings') %></p>
+              <p class="text-gray-500 text-sm mt-1"><%= t('messages.no_holdings_detail') %></p>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
+          <h2 class="text-xl font-bold text-gray-900"><%= t('labels.transaction_history') %></h2>
+        </div>
+        <div class="divide-y divide-gray-200">
+          <% if @transactions.any? %>
+            <% @transactions.first(10).each do |transaction| %>
+              <div class="px-6 py-4 hover:bg-gray-50 transition-colors duration-200">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center">
+                    <div class="w-10 h-10 rounded-full flex items-center justify-center mr-3 <%= transaction.buy? ? 'bg-green-100' : 'bg-red-100' %>">
+                      <svg class="w-5 h-5 <%= transaction.buy? ? 'text-green-600' : 'text-red-600' %>" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <%= transaction.buy? ? '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>'.html_safe : '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6"/>'.html_safe %>
+                      </svg>
+                    </div>
+                    <div>
+                      <p class="font-semibold text-gray-900"><%= transaction.action.humanize %> <%= transaction.quantity %> <%= pluralize(transaction.quantity, t('plurals.unit.one'), t('plurals.unit.other')) %></p>
+                      <p class="text-sm text-gray-500">$<%= number_with_delimiter(transaction.price_per_unit, delimiter: ',') %> <%= t('labels.per_unit') %></p>
+                    </div>
+                  </div>
+                  <div class="text-right">
+                    <p class="font-bold <%= transaction.buy? ? 'text-red-600' : 'text-green-600' %>">
+                      <%= transaction.buy? ? '-' : '+' %>$<%= number_with_delimiter(transaction.total_amount, delimiter: ',') %>
+                    </p>
+                    <p class="text-xs text-gray-500"><%= time_ago_in_words(transaction.created_at) %> <%= t('time.ago') %></p>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+            <%= content_tag(:div, t('messages.showing_transactions', count: @transactions.count), class: "px-6 py-3 bg-gray-50 text-center text-sm text-gray-600") if @transactions.count > 10 %>
+          <% else %>
+            <div class="px-6 py-12 text-center">
+              <svg class="w-12 h-12 text-gray-400 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+              <p class="text-gray-600"><%= t('messages.no_transactions') %></p>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="space-y-6">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <div class="bg-indigo-600 px-6 py-4">
+          <h2 class="text-xl font-bold text-white"><%= t('labels.trading_panel') %></h2>
+        </div>
+        <div class="p-6">
+          <div class="mb-6">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-sm font-medium text-gray-600"><%= t('labels.current_price') %></span>
+              <span class="text-2xl font-bold text-indigo-600">$<%= number_with_delimiter(@simulation.current_price, delimiter: ',') %></span>
+            </div>
+          </div>
+
+          <%= form_with url: simulation_transactions_path(@simulation), method: :post, local: true, class: "space-y-4" do |f| %>
+            <div>
+              <label class="block text-sm font-bold text-gray-900 mb-2"><%= t('labels.action') %></label>
+              <div class="grid grid-cols-2 gap-2">
+                <label class="flex items-center justify-center px-4 py-3 border-2 border-gray-300 rounded-lg cursor-pointer hover:border-green-500 transition duration-200 has-[:checked]:border-green-500 has-[:checked]:bg-green-50">
+                  <%= f.radio_button :trade_action, 'buy', class: "sr-only", checked: true %>
+                  <span class="font-semibold text-gray-900"><%= t('actions.buy') %></span>
+                </label>
+                <label class="flex items-center justify-center px-4 py-3 border-2 border-gray-300 rounded-lg cursor-pointer hover:border-red-500 transition duration-200 has-[:checked]:border-red-500 has-[:checked]:bg-red-50">
+                  <%= f.radio_button :trade_action, 'sell', class: "sr-only" %>
+                  <span class="font-semibold text-gray-900"><%= t('actions.sell') %></span>
+                </label>
+              </div>
+            </div>
+
+            <div>
+              <label for="transaction_quantity" class="block text-sm font-bold text-gray-900 mb-2"><%= t('labels.quantity') %></label>
+              <%= f.number_field :quantity, class: "block w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500", placeholder: "Enter quantity", min: "1", required: true %>
+            </div>
+
+            <div>
+              <label for="transaction_price_per_unit" class="block text-sm font-bold text-gray-900 mb-2"><%= t('labels.price_per_unit') %></label>
+              <%= f.number_field :price_per_unit, class: "block w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500", value: @simulation.current_price, step: "0.01", min: "0.01", required: true %>
+            </div>
+
+            <%= f.submit t('actions.execute_trade'), class: "w-full bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-3 rounded-lg font-semibold transition duration-200 cursor-pointer" %>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <div class="bg-blue-600 px-6 py-4">
+          <h2 class="text-xl font-bold text-white"><%= t('labels.time_control') %></h2>
+        </div>
+        <div class="p-6">
+          <p class="text-sm text-gray-600 mb-4"><%= t('messages.advance_time_description') %></p>
+          <%= button_to advance_simulation_path(@simulation), method: :post, class: "w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-semibold transition duration-200 inline-flex items-center justify-center" do %>
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <%= t('actions.advance_time') %>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="bg-gradient-to-br from-purple-50 to-indigo-50 border border-indigo-200 rounded-lg p-6">
+        <div class="flex items-start">
+          <svg class="w-6 h-6 text-indigo-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+          <div>
+            <h3 class="font-bold text-gray-900 mb-2"><%= t('trading.tips.title') %></h3>
+            <ul class="text-sm text-gray-700 space-y-1">
+              <li><%= t('trading.tips.monitor_prices') %></li>
+              <li><%= t('trading.tips.diversify') %></li>
+              <li><%= t('trading.tips.consider_risk') %></li>
+              <li><%= t('trading.tips.learn_from_decisions') %></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

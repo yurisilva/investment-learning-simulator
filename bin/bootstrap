@@ -1,0 +1,55 @@
+#!/usr/bin/env bash
+# Bootstrap script to set up the investment learner application
+
+set -e
+
+echo "🚀 Bootstrapping Investment Learner App..."
+echo ""
+
+# Check if Docker is installed
+if ! command -v docker &> /dev/null; then
+    echo "❌ Docker is not installed. Please install it first."
+    exit 1
+fi
+
+# Start PostgreSQL container
+echo "🐳 Starting PostgreSQL container..."
+docker compose up -d
+sleep 3
+echo "✅ PostgreSQL container is running on port 5433"
+echo ""
+
+# Install Ruby dependencies
+echo "📦 Installing Ruby gems..."
+bundle check || bundle install
+echo ""
+
+# Setup databases
+echo "🗄️  Setting up databases..."
+bin/rails db:create
+bin/rails db:migrate
+echo ""
+
+# Load seed data
+echo "🌱 Loading seed data..."
+bin/rails db:seed
+echo ""
+
+# Run tests to verify setup
+echo "🧪 Running tests to verify setup..."
+bin/rspec --format documentation
+echo ""
+
+echo "✅ Bootstrap complete!"
+echo ""
+echo "Next steps:"
+echo "  - Start the server: bin/dev"
+echo "  - Run tests: bin/rspec"
+echo "  - Open console: bin/rails console"
+echo "  - Stop database: docker compose down"
+echo ""
+echo "Database Info:"
+echo "  - Host: localhost"
+echo "  - Port: 5433"
+echo "  - User: yuri"
+echo "  - Password: password"
