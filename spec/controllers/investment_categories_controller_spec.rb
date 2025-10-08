@@ -15,7 +15,7 @@ RSpec.describe InvestmentCategoriesController, type: :controller do
 
       get :index
 
-      expect(assigns(:investment_categories)).to match_array([category1, category2])
+      expect(assigns(:investment_categories)).to match_array([ category1, category2 ])
     end
 
     it "includes investment types association" do

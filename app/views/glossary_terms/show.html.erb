@@ -70,7 +70,7 @@
           </div>
           <div class="bg-white rounded-lg shadow-md p-6 overflow-x-auto">
             <div class="prose prose-sm max-w-none">
-              <%= t("glossary_examples.#{@glossary_term.term.parameterize.underscore}", default: @glossary_term.example_scenario).html_safe %>
+              <%= sanitize t("glossary_examples.#{@glossary_term.term.parameterize.underscore}", default: @glossary_term.example_scenario), tags: %w[div h4 h5 p ul li table thead tbody tr th td span strong svg path], attributes: %w[class colspan rowspan stroke-linecap stroke-linejoin stroke-width viewBox fill stroke d] %>
             </div>
           </div>
         </div>

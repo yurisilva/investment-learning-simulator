@@ -1,5 +1,5 @@
 class SimulationsController < ApplicationController
-  before_action :set_simulation, only: [:show, :advance]
+  before_action :set_simulation, only: [ :show, :advance ]
 
   def new
     @simulation = Simulation.new
@@ -12,7 +12,7 @@ class SimulationsController < ApplicationController
     @simulation.current_capital = @simulation.initial_capital
 
     if @simulation.save
-      redirect_to @simulation, notice: 'Simulation created successfully.'
+      redirect_to @simulation, notice: "Simulation created successfully."
     else
       @investment_types = InvestmentType.includes(:investment_category).all
       render :new, status: :unprocessable_entity
@@ -26,7 +26,7 @@ class SimulationsController < ApplicationController
 
   def advance
     @simulation.advance!(1)
-    redirect_to @simulation, notice: 'Time advanced by 1 month. Price updated!'
+    redirect_to @simulation, notice: "Time advanced by 1 month. Price updated!"
   end
 
   private

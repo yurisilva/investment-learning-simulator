@@ -15,7 +15,7 @@ RSpec.describe GlossaryTermsController, type: :controller do
 
       get :index
 
-      expect(assigns(:glossary_terms)).to eq([term_a, term_b])
+      expect(assigns(:glossary_terms)).to eq([ term_a, term_b ])
     end
 
     context "when category parameter is provided" do
@@ -23,12 +23,12 @@ RSpec.describe GlossaryTermsController, type: :controller do
         term_with_stocks = GlossaryTerm.create!(
           term: "Dividend",
           definition: "Payment to shareholders",
-          related_categories: ["stocks"]
+          related_categories: [ "stocks" ]
         )
         term_with_bonds = GlossaryTerm.create!(
           term: "Coupon",
           definition: "Bond interest",
-          related_categories: ["bonds"]
+          related_categories: [ "bonds" ]
         )
 
         get :index, params: { category: "stocks" }
@@ -43,17 +43,17 @@ RSpec.describe GlossaryTermsController, type: :controller do
         term1 = GlossaryTerm.create!(
           term: "Dividend",
           definition: "Payment to shareholders",
-          related_categories: ["stocks"]
+          related_categories: [ "stocks" ]
         )
         term2 = GlossaryTerm.create!(
           term: "Coupon",
           definition: "Bond interest",
-          related_categories: ["bonds"]
+          related_categories: [ "bonds" ]
         )
 
         get :index
 
-        expect(assigns(:glossary_terms)).to match_array([term1, term2])
+        expect(assigns(:glossary_terms)).to match_array([ term1, term2 ])
       end
     end
   end
@@ -63,7 +63,7 @@ RSpec.describe GlossaryTermsController, type: :controller do
       GlossaryTerm.create!(
         term: "Short",
         definition: "Selling borrowed assets",
-        related_categories: ["stocks"]
+        related_categories: [ "stocks" ]
       )
     end
 

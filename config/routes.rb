@@ -15,14 +15,14 @@ Rails.application.routes.draw do
     root "investment_categories#index"
 
     # Investment learning app routes
-    resources :investment_categories, only: [:index, :show]
-    resources :glossary_terms, only: [:index, :show]
+    resources :investment_categories, only: [ :index, :show ]
+    resources :glossary_terms, only: [ :index, :show ]
 
-    resources :simulations, only: [:new, :create, :show] do
+    resources :simulations, only: [ :new, :create, :show ] do
       member do
         post :advance
       end
-      resources :transactions, only: [:create]
+      resources :transactions, only: [ :create ]
     end
   end
 end

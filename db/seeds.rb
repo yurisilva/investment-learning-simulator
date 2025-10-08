@@ -123,54 +123,54 @@ InvestmentType.create!([
 puts "Creating glossary terms..."
 
 GlossaryTerm.create!([
-  { term: "IPCA", definition: "Índice de Preços ao Consumidor Amplo - principal indicador de inflação do Brasil, medido pelo IBGE.", related_categories: ["Renda Fixa", "Tesouro Direto"] },
-  { term: "SELIC", definition: "Sistema Especial de Liquidação e Custódia - taxa básica de juros da economia brasileira, definida pelo COPOM.", related_categories: ["Renda Fixa", "Tesouro Direto"] },
-  { term: "CDI", definition: "Certificado de Depósito Interbancário - taxa de empréstimos entre bancos, muito próxima à SELIC.", related_categories: ["Renda Fixa", "CDB"] },
+  { term: "IPCA", definition: "Índice de Preços ao Consumidor Amplo - principal indicador de inflação do Brasil, medido pelo IBGE.", related_categories: [ "Renda Fixa", "Tesouro Direto" ] },
+  { term: "SELIC", definition: "Sistema Especial de Liquidação e Custódia - taxa básica de juros da economia brasileira, definida pelo COPOM.", related_categories: [ "Renda Fixa", "Tesouro Direto" ] },
+  { term: "CDI", definition: "Certificado de Depósito Interbancário - taxa de empréstimos entre bancos, muito próxima à SELIC.", related_categories: [ "Renda Fixa", "CDB" ] },
   {
     term: "PUT",
     definition: "Opção de venda que dá o direito de vender um ativo a um preço predeterminado.",
-    related_categories: ["Renda Variável", "Ações"]
+    related_categories: [ "Renda Variável", "Ações" ]
   },
   {
     term: "CALL",
     definition: "Opção de compra que dá o direito de comprar um ativo a um preço predeterminado.",
-    related_categories: ["Renda Variável", "Ações"]
+    related_categories: [ "Renda Variável", "Ações" ]
   },
   {
     term: "Short",
     definition: "Venda a descoberto - operação especulativa que lucra com a queda do preço de um ativo.",
-    related_categories: ["Renda Variável", "Ações"]
+    related_categories: [ "Renda Variável", "Ações" ]
   },
   {
     term: "Long",
     definition: "Posição comprada - estratégia de comprar e manter ativos esperando valorização.",
-    related_categories: ["Renda Variável", "Ações"]
+    related_categories: [ "Renda Variável", "Ações" ]
   },
-  { term: "B3", definition: "Brasil, Bolsa, Balcão - bolsa de valores oficial do Brasil, onde são negociados ações, ETFs e outros ativos.", related_categories: ["Renda Variável", "Ações", "ETF", "Fundos Imobiliários"] },
+  { term: "B3", definition: "Brasil, Bolsa, Balcão - bolsa de valores oficial do Brasil, onde são negociados ações, ETFs e outros ativos.", related_categories: [ "Renda Variável", "Ações", "ETF", "Fundos Imobiliários" ] },
   {
     term: "Dividendos",
     definition: "Parcela do lucro de uma empresa distribuída aos acionistas. Isento de Imposto de Renda para pessoa física.",
-    related_categories: ["Ações"]
+    related_categories: [ "Ações" ]
   },
   {
     term: "Yield",
     definition: "Rendimento percentual de um investimento em relação ao seu preço. Em FIIs, representa o retorno mensal.",
-    related_categories: ["Fundos Imobiliários", "Ações"]
+    related_categories: [ "Fundos Imobiliários", "Ações" ]
   },
-  { term: "Liquidez", definition: "Facilidade de converter um ativo em dinheiro sem perda significativa de valor.", related_categories: ["Renda Fixa", "Renda Variável"] },
-  { term: "FGC", definition: "Fundo Garantidor de Créditos - protege investimentos em Renda Fixa até R$ 250 mil por CPF e instituição.", related_categories: ["Renda Fixa", "CDB"] },
-  { term: "Bovespa", definition: "Antiga bolsa de valores de São Paulo, agora parte da B3. Índice Ibovespa representa as principais ações.", related_categories: ["Ações", "ETF"] },
-  { term: "Home Broker", definition: "Plataforma online para negociar ativos na bolsa de valores através de corretoras.", related_categories: ["Renda Variável", "Ações"] },
-  { term: "Índice Sharpe", definition: "Métrica que mede o retorno ajustado ao risco de um investimento. Quanto maior, melhor.", related_categories: ["Renda Variável", "ETF"] },
-  { term: "DY (Dividend Yield)", definition: "Percentual de dividendos pagos em relação ao preço da ação nos últimos 12 meses.", related_categories: ["Ações"] },
-  { term: "P/L (Preço/Lucro)", definition: "Múltiplo que mostra quantos anos levaria para recuperar o investimento com os lucros atuais da empresa.", related_categories: ["Ações"] },
-  { term: "P/VP (Preço/Valor Patrimonial)", definition: "Relação entre o preço da ação e o valor patrimonial por ação. Indica se a ação está cara ou barata.", related_categories: ["Ações"] },
-  { term: "ROE", definition: "Return on Equity - retorno sobre o patrimônio líquido. Mede a eficiência da empresa em gerar lucro.", related_categories: ["Ações"] },
-  { term: "Volatilidade", definition: "Medida de variação de preço de um ativo. Alta volatilidade indica maior risco e oportunidade.", related_categories: ["Renda Variável", "Criptomoedas"] },
-  { term: "Spread", definition: "Diferença entre o preço de compra e venda de um ativo. Quanto menor, melhor para o investidor.", related_categories: ["Renda Variável"] },
-  { term: "Benchmark", definition: "Índice de referência usado para comparar o desempenho de investimentos. Ex: CDI para Renda Fixa.", related_categories: ["Renda Fixa", "Renda Variável"] },
-  { term: "Taxa de Administração", definition: "Percentual anual cobrado por fundos de investimento para remunerar a gestão.", related_categories: ["ETF", "Fundos Imobiliários"] },
-  { term: "Aportes", definition: "Aplicações regulares de dinheiro em investimentos para aumentar o patrimônio ao longo do tempo.", related_categories: ["Renda Fixa", "Renda Variável"] }
+  { term: "Liquidez", definition: "Facilidade de converter um ativo em dinheiro sem perda significativa de valor.", related_categories: [ "Renda Fixa", "Renda Variável" ] },
+  { term: "FGC", definition: "Fundo Garantidor de Créditos - protege investimentos em Renda Fixa até R$ 250 mil por CPF e instituição.", related_categories: [ "Renda Fixa", "CDB" ] },
+  { term: "Bovespa", definition: "Antiga bolsa de valores de São Paulo, agora parte da B3. Índice Ibovespa representa as principais ações.", related_categories: [ "Ações", "ETF" ] },
+  { term: "Home Broker", definition: "Plataforma online para negociar ativos na bolsa de valores através de corretoras.", related_categories: [ "Renda Variável", "Ações" ] },
+  { term: "Índice Sharpe", definition: "Métrica que mede o retorno ajustado ao risco de um investimento. Quanto maior, melhor.", related_categories: [ "Renda Variável", "ETF" ] },
+  { term: "DY (Dividend Yield)", definition: "Percentual de dividendos pagos em relação ao preço da ação nos últimos 12 meses.", related_categories: [ "Ações" ] },
+  { term: "P/L (Preço/Lucro)", definition: "Múltiplo que mostra quantos anos levaria para recuperar o investimento com os lucros atuais da empresa.", related_categories: [ "Ações" ] },
+  { term: "P/VP (Preço/Valor Patrimonial)", definition: "Relação entre o preço da ação e o valor patrimonial por ação. Indica se a ação está cara ou barata.", related_categories: [ "Ações" ] },
+  { term: "ROE", definition: "Return on Equity - retorno sobre o patrimônio líquido. Mede a eficiência da empresa em gerar lucro.", related_categories: [ "Ações" ] },
+  { term: "Volatilidade", definition: "Medida de variação de preço de um ativo. Alta volatilidade indica maior risco e oportunidade.", related_categories: [ "Renda Variável", "Criptomoedas" ] },
+  { term: "Spread", definition: "Diferença entre o preço de compra e venda de um ativo. Quanto menor, melhor para o investidor.", related_categories: [ "Renda Variável" ] },
+  { term: "Benchmark", definition: "Índice de referência usado para comparar o desempenho de investimentos. Ex: CDI para Renda Fixa.", related_categories: [ "Renda Fixa", "Renda Variável" ] },
+  { term: "Taxa de Administração", definition: "Percentual anual cobrado por fundos de investimento para remunerar a gestão.", related_categories: [ "ETF", "Fundos Imobiliários" ] },
+  { term: "Aportes", definition: "Aplicações regulares de dinheiro em investimentos para aumentar o patrimônio ao longo do tempo.", related_categories: [ "Renda Fixa", "Renda Variável" ] }
 ])
 
 puts "Seed data created successfully!"

@@ -7,12 +7,12 @@ class TransactionsController < ApplicationController
     trade_action = params[:trade_action]
 
     begin
-      if trade_action == 'buy'
+      if trade_action == "buy"
         @simulation.buy!(quantity, price)
-        redirect_to @simulation, notice: 'Buy order executed successfully.'
-      elsif trade_action == 'sell'
+        redirect_to @simulation, notice: "Buy order executed successfully."
+      elsif trade_action == "sell"
         @simulation.sell!(quantity, price)
-        redirect_to @simulation, notice: 'Sell order executed successfully.'
+        redirect_to @simulation, notice: "Sell order executed successfully."
       else
         redirect_to @simulation, alert: "Invalid action: #{trade_action}"
       end

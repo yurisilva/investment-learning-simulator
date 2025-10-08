@@ -24,7 +24,7 @@ class SimulationEngine
     ActiveRecord::Base.transaction do
       update_portfolio_for_buy(quantity, current_price)
       simulation.update!(current_capital: simulation.current_capital - total_cost)
-      create_transaction('buy', quantity, current_price)
+      create_transaction("buy", quantity, current_price)
     end
   end
 
@@ -36,7 +36,7 @@ class SimulationEngine
     ActiveRecord::Base.transaction do
       portfolio.update!(quantity: portfolio.quantity - quantity)
       simulation.update!(current_capital: simulation.current_capital + total_revenue)
-      create_transaction('sell', quantity, current_price)
+      create_transaction("sell", quantity, current_price)
     end
   end
 
@@ -50,8 +50,8 @@ class SimulationEngine
 
   def calculate_volatility(investment_type)
     name_lower = investment_type.name.downcase
-    return 30.0 if name_lower.include?('crypto')
-    return 5.0 if name_lower.include?('bond')
+    return 30.0 if name_lower.include?("crypto")
+    return 5.0 if name_lower.include?("bond")
     20.0
   end
 
@@ -62,7 +62,7 @@ class SimulationEngine
   def apply_monthly_price_change
     investment_type = simulation.investment_type
     price_change = generate_price_change(investment_type)
-    new_price = [investment_type.base_price + price_change, 1.0].max
+    new_price = [ investment_type.base_price + price_change, 1.0 ].max
     investment_type.update!(base_price: new_price)
   end
 
